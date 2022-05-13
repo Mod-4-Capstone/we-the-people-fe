@@ -2,15 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.likert {
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-}
-
-li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
