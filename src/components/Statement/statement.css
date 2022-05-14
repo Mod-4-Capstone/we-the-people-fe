@@ -1,6 +1,5 @@
 .likert {
   display: flex;
-  flex-direction: row-reverse;
   list-style: none;
   justify-content: space-evenly;
   width:100%;
