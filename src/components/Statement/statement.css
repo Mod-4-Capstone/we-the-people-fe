@@ -1,5 +1,6 @@
 .likert {
   display: flex;
+  flex-direction: row-reverse;
   list-style: none;
   justify-content: space-evenly;
   width:100%;
@@ -7,7 +8,8 @@
   padding:0 0 35px;
   border-bottom:2px solid #efefef;
 }
-form .likert:last-of-type {border-bottom:0;}
+
+/* form .likert:last-of-type {border-bottom:0;}
 form .likert:before {
   content: '';
   position:relative;
@@ -17,7 +19,7 @@ form .likert:before {
   background-color:#efefef;
   height:4px;
   width:78%;
-}
+} */
 
 li {
   display: flex;
