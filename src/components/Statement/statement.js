@@ -7,23 +7,23 @@ const Statement = (props) => {
     <label className="statement" htmlFor="likert-scale">{props.statement}</label>
     <ul className='likert'  onChange={(e) => props.handleChange(e)}>
       <li>
-        <input type="radio" name="likert" value="100"/>
-        <label>Strongly agree</label>
+        <input type="radio" name={props.name} value="100"/>
+        <label>Strongly Agree</label>
       </li>
       <li>
-        <input type="radio" name="likert" value="75"/>
+        <input type="radio" name={props.name} value="75"/>
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="likert" value="50"/>
+        <input type="radio" name={props.name} value="50"/>
         <label>Neutral</label>
       </li>
       <li>
-        <input type="radio" name="likert" value="25"/>
+        <input type="radio" name={props.name} value="25"/>
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="likert" value="0"/>
+        <input type="radio" name={props.name} value="0"/>
         <label>Strongly disagree</label>
       </li>
      </ul>
