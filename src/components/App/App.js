@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <Layout>
         <h1>super cool app dude</h1>
-        <Quiz/>
+        <Quiz setQuizResult={setQuizResult}/>
 
       </Layout>
       
