@@ -6,6 +6,11 @@
   margin:0;
   padding:0 0 35px;
   border-bottom:2px solid #efefef;
+  font-family: 'Mukta Vaani', sans-serif;
+}
+
+.statement {
+  font-family: 'Khula', sans-serif;
 }
 
 /* form .likert:last-of-type {border-bottom:0;}

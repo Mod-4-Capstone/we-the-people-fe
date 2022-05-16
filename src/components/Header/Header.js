@@ -7,7 +7,6 @@ const Header = () => {
       <h1 className="title">We The People</h1>
       {/* Take Quiz/ Home */}
       {/* State Dropdown */}
-
     </section>
   )
 }
