@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement/Statement";
 
@@ -141,7 +142,9 @@ const Quiz = (props) => {
         handleChange={handleChange}
         setRadioChecked={setRadioChecked}
       />
-      <button type="submit">Submit</button>
+      <Link to="/results-dashboard">
+        <button type="submit">Submit</button>
+      </Link>
     </form>
   );
 };
