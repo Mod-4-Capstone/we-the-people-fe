@@ -117,7 +117,7 @@ const Quiz = (props) => {
         setFormFields={setFormFields}
         handleChange={handleChange}
       />
-      <button type="submit">Submit</button>
+      <button className='submit-btn' type="submit">Get my results!</button>
       {isFormSubmitted && <Redirect to="/results-dashboard"/>}
     </form>
     </>
