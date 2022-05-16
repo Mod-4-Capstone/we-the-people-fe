@@ -26,7 +26,6 @@ const App = () => {
           
           <Route exact path="/results-dashboard"
             render={() => <MainDash/> }>
-
           </Route>
 
         </Switch>
