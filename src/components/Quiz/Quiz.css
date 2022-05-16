@@ -1,8 +1,38 @@
 .quiz {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  align-items: center;
+  border: 2px solid green;
+  overflow: scroll;
+  background-color: #F1FAEE;
+  margin-bottom: 2em;
+  padding: 2em;
 }
 
 select, input, button {
   font-family: 'Khula', sans-serif;
+}
+
+.input-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.age-dropdown,
+.zipcode-input {
+  margin-top: 12em;
+  margin-bottom: 2em;
+  width: 12em;
+  border-radius: 50px;
+  border: 2px solid #1D3557;
+  text-align: center;
+}
+
+.quiz-header {
+  font-family: 'Khula', sans-serif;
+  color: white;
+
 }
