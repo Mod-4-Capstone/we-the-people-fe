@@ -3,10 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10%;
+  height: 8rem;
   background-color: #E63946;
   width: 100%;
   color: white;
+  padding: .8em;
+  position: sticky;
+  bottom: 0%;
 }
 
 a {
