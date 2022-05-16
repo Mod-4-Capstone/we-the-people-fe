@@ -7,7 +7,7 @@ const RepCard = () => {
     <div className="rep-card">
       <div className="bio-info">
         <div>
-          {/* <img>image</img> */}
+          <img src="https://theunitedstates.io/images/congress/450x550/H000273.jpg"/>
         </div>
         <div>
           <p className="bio-text">Name, etc.</p>

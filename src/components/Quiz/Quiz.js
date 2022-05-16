@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"
+import { Link, Redirect } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement/Statement";
 
@@ -16,34 +16,11 @@ const Quiz = (props) => {
     Q7: "",
     Q8: "",
   });
-  const [radioChecked, setRadioChecked] = useState({
-    Q1: false,
-    Q2: false,
-    Q3: false,
-    Q4: false,
-    Q5: false,
-    Q6: false,
-    Q7: false,
-    Q8: false,
-  });
+
+  const [isFormSubmitted, setIsFormSubmitted] = useState (false)
 
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value });
-  };
-
-  const clearInputs = () => {
-    setFormFields({
-      age: "default",
-      zipcode: "",
-      Q1: "",
-      Q2: "",
-      Q3: "",
-      Q4: "",
-      Q5: "",
-      Q6: "",
-      Q7: "",
-      Q8: "",
-    });
   };
 
   const submitForm = (e) => {
@@ -53,7 +30,7 @@ const Quiz = (props) => {
       ...formFields,
     };
     props.setQuizResult(newQuizResult);
-    clearInputs();
+    setIsFormSubmitted(true)
   };
 
   return (
@@ -79,7 +56,7 @@ const Quiz = (props) => {
         required
         type="number"
         placeholder="Enter your zipcode"
-        name="zipcode"
+        name="zipcode"       
         min="00501"
         max="99950"
         value={formFields.zipcode}
@@ -90,61 +67,51 @@ const Quiz = (props) => {
         name="Q1"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        radioChecked={radioChecked}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="Public schools should be better funded."
         name="Q2"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="Healthcare should be universal."
         name="Q3"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="There should be more restrictions on the process of purchasing a gun."
         name="Q4"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="The U.S. government should increase environmental regulations in order to mitigate climate change."
         name="Q5"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="The U.S. government should raise the federal minimum wage."
         name="Q6"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="The U.S. government should build a wall along the southern border."
         name="Q7"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
       <Statement
         statement="The U.S. government should support a separation of church and state."
         name="Q8"
         setFormFields={setFormFields}
         handleChange={handleChange}
-        setRadioChecked={setRadioChecked}
       />
-      <Link to="/results-dashboard">
-        <button type="submit">Submit</button>
-      </Link>
+      <button type="submit">Submit</button>
+      {isFormSubmitted && <Redirect to="/results-dashboard"/>}
     </form>
   );
 };

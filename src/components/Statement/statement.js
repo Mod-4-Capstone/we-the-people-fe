@@ -13,7 +13,6 @@ const Statement = (props) => {
             required
             type="radio"
             name={props.name}
-            onChange={() => props.setRadioChecked()}
             value="0"
           />
           <label>Strongly Disagree</label>
