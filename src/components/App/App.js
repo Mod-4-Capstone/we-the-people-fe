@@ -18,7 +18,6 @@ const App = () => {
             render={() =>{
               return (
               <>
-                <h1>super cool app dude</h1>
                 <Quiz setQuizResult={setQuizResult}/>
               </>
           )}}
