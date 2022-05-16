@@ -1,3 +1,17 @@
-a{
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  background-color: #E63946;
+  width: 100%;
+  color: white;
+}
+
+a {
   font-family: 'Khula', sans-serif;
+  text-decoration: none;
+  color: white;
+  margin: .5em;
 }
