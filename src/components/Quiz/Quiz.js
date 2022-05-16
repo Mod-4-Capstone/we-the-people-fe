@@ -14,7 +14,7 @@ const Quiz = (props) => {
     Q5: "",
     Q6: "",
     Q7: "",
-    Q8: "",
+    Q8: "", // 0, 25, 50, 75, 100
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState (false)
@@ -35,8 +35,8 @@ const Quiz = (props) => {
 
   return (
     <>
-    <p className="quiz-header">Here's why you should take our quiz...</p>
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
+    <p className="quiz-header">Here's why you should take our quiz...</p>
       <div className="input-container">
         <select
           required
