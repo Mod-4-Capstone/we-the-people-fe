@@ -1,0 +1,8 @@
+.quiz {
+  display: flex;
+  flex-direction: column;
+}
+
+select, input, button {
+  font-family: 'Khula', sans-serif;
+}
