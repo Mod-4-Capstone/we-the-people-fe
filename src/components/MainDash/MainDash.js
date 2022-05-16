@@ -5,10 +5,10 @@ import RepContainer from "../RepContainer/RepContainer"
 
 const MainDash = () => {
   return (
-    <>
+    <section className="main-dash">
       <QuizResults />
       <RepContainer />
-    </>
+    </section>
     );
 }
  
