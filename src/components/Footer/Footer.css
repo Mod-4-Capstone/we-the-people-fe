@@ -10,10 +10,10 @@
   padding: .8em;
   position: sticky;
   bottom: 0%;
+  font-family: 'Khula', sans-serif;
 }
 
 a {
-  font-family: 'Khula', sans-serif;
   text-decoration: none;
   color: white;
   margin: .5em;

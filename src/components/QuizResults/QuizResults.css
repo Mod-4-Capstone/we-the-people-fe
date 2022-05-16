@@ -10,17 +10,18 @@
   width: 75%;
   padding: 2em;
   margin: 1em;
-  box-shadow:  8px 8px 20px #345d77,
-  -8px -8px 20px #5699c3;
+  box-shadow:  8px 8px 20px #345d77;
 }
 
 .state-wide-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 70px;
   width: 20%;
   padding: 2em;
   margin: 1em;
   background-color: #A8DADC;
-  box-shadow:  8px 8px 20px #345d77,
-  -8px -8px 20px #5699c3;
+  box-shadow:  8px 8px 20px #345d77;
 
 }

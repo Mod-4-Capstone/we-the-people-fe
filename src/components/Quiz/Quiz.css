@@ -32,11 +32,24 @@ select, input, button {
   border-radius: 50px;
   border: 2px solid #1D3557;
   text-align: center;
+  cursor: pointer;
 }
 
 .quiz-header {
   font-family: 'Khula', sans-serif;
   font-size: 20px;
-  margin-top: 13em;
-
+  margin-top: 15em;
 }
+
+.submit-btn {
+  width: 12em;
+  border-radius: 50px;
+  background-color: #1D3557;
+  border: none;
+  padding: .5em;
+  color: white;
+  margin-top: .5em;
+  font-family: 'Khula', sans-serif;
+  cursor: pointer;
+}
+
