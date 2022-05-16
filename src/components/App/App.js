@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom"
 import './App.css';
 import Layout from '../Layout/Layout'
 import Quiz from '../Quiz/Quiz'
+import MainDash from '../MainDash/MainDash';
 
 
 const App = () => {
@@ -12,8 +13,23 @@ const App = () => {
   return (  
     <div className="App">
       <Layout>
-        <h1>super cool app dude</h1>
-        <Quiz setQuizResult={setQuizResult}/>
+        <Switch>
+          <Route exact path="/"
+            render={() =>{
+              return (
+              <>
+                <h1>super cool app dude</h1>
+                <Quiz setQuizResult={setQuizResult}/>
+              </>
+          )}}
+          />
+          
+          <Route exact path="/results-dashboard"
+            render={() => <MainDash/> }>
+
+          </Route>
+
+        </Switch>
 
       </Layout>
       
