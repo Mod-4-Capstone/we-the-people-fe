@@ -1,5 +1,5 @@
 import React from "react";
-import "./Statement.css";
+import "./statement.css";
 
 const Statement = (props) => {
   return (
