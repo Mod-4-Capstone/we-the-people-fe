@@ -1,4 +1,53 @@
 .rep-card {
-  border: 1px solid aqua
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 30rem;
+  width: 30rem;
+  padding: 2em;
+  margin: 2em;
+  background-color: #F1FAEE;
+  box-shadow:  8px 8px 30px #345d77,
+  -8px -8px 30px #5699c3;
+  font-family: 'Khula', sans-serif;
+
+}
+
+.rep-img {
+  height: 200px;
+  width: 150px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.bio-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bio-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.rep-match {
+  font-size: 17px;
+  margin-top: .5em;
+  background-color: #E63946;
+  border-radius: 30px;
+  color: white;
+  padding: .5em;
+  font-weight:700;
+  align-self: center;
+}
+
+.rep-issues-container {
+  border-top: 2px solid #1D3557;
+  margin: 1em 0 1em 0;
+  padding-top: 1em;
 }
 

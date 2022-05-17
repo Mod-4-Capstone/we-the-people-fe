@@ -7,11 +7,11 @@ import Footer from "../Footer/Footer"
 const Layout = (props) => {
   
   return (
-  <>
+  <section className="layout">
     <Header/>
       {props.children}
     <Footer/>
-  </>
+  </section>
   )
 }
 

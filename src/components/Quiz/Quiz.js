@@ -14,7 +14,7 @@ const Quiz = (props) => {
     Q5: "",
     Q6: "",
     Q7: "",
-    Q8: "",
+    Q8: "", // 0, 25, 50, 75, 100
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState (false)
@@ -34,34 +34,41 @@ const Quiz = (props) => {
   };
 
   return (
+    <>
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
-      <select
-        required
-        defaultValue="default"
-        name="age"
-        onChange={(e) => handleChange(e)}
-      >
-        <option value="default" disabled>
-          Select your Age Range
-        </option>
-        <option value="18-28">18-28</option>
-        <option value="29-39">29-39</option>
-        <option value="40-50">40-50</option>
-        <option value="51-61">51-61</option>
-        <option value="62-70">62-70</option>
-        <option value="70+">70+</option>
-        <option value="deferred">Prefer not to say</option>
-      </select>
-      <input
-        required
-        type="number"
-        placeholder="Enter your zipcode"
-        name="zipcode"       
-        min="00501"
-        max="99950"
-        value={formFields.zipcode}
-        onChange={(e) => handleChange(e)}
-      ></input>
+    <p className="quiz-header">Here's why you should take our quiz...</p>
+      <div className="input-container">
+        <select
+          required
+          className="age-dropdown"
+          defaultValue="default"
+          name="age"
+          onChange={(e) => handleChange(e)}
+        >
+          <option value="default" disabled>
+            Select your Age Range
+          </option>
+          <option value="18-28">18-28</option>
+          <option value="29-39">29-39</option>
+          <option value="40-50">40-50</option>
+          <option value="51-61">51-61</option>
+          <option value="62-70">62-70</option>
+          <option value="70+">70+</option>
+          <option value="deferred">Prefer not to say</option>
+        </select>
+        <input
+          required
+          className="zipcode-input"
+          type="number"
+          placeholder="Enter your zipcode"
+          name="zipcode"       
+          min="00501"
+          max="99950"
+          value={formFields.zipcode}
+          onChange={(e) => handleChange(e)}
+        ></input>
+      </div>
+
       <Statement
         statement="Abortion should be legalized at the federal level."
         name="Q1"
@@ -110,9 +117,10 @@ const Quiz = (props) => {
         setFormFields={setFormFields}
         handleChange={handleChange}
       />
-      <button type="submit">Submit</button>
+      <button className='submit-btn' type="submit">Get my results!</button>
       {isFormSubmitted && <Redirect to="/results-dashboard"/>}
     </form>
+    </>
   );
 };
 

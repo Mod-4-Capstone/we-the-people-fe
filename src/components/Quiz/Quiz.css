@@ -1,8 +1,55 @@
 .quiz {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  width: 80%;
+  align-items: center;
+  overflow: scroll;
+  background-color: #F1FAEE;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 2em;
+  border-radius: 30px;
+  box-shadow:  8px 8px 30px #345d77,
+  -8px -8px 30px #5699c3;
 }
 
 select, input, button {
   font-family: 'Khula', sans-serif;
 }
+
+.input-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.age-dropdown,
+.zipcode-input {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 12em;
+  border-radius: 50px;
+  border: 2px solid #1D3557;
+  text-align: center;
+  cursor: pointer;
+}
+
+.quiz-header {
+  font-family: 'Khula', sans-serif;
+  font-size: 20px;
+  margin-top: 15em;
+}
+
+.submit-btn {
+  width: 12em;
+  border-radius: 50px;
+  background-color: #1D3557;
+  border: none;
+  padding: .5em;
+  color: white;
+  margin-top: .5em;
+  font-family: 'Khula', sans-serif;
+  cursor: pointer;
+}
+

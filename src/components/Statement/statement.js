@@ -9,12 +9,7 @@ const Statement = (props) => {
       </label>
       <ul className="likert" onChange={(e) => props.handleChange(e)}>
         <li>
-          <input
-            required
-            type="radio"
-            name={props.name}
-            value="0"
-          />
+          <input required type="radio" name={props.name} value="0"/>
           <label>Strongly Disagree</label>
         </li>
         <li>

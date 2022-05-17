@@ -1,0 +1,27 @@
+.quiz-results-container {
+  display: flex;
+  font-family: 'Khula', sans-serif;
+
+}
+
+.user-quiz-results {
+  background-color: #A8DADC;
+  border-radius: 70px;
+  width: 75%;
+  padding: 2em;
+  margin: 1em;
+  box-shadow:  8px 8px 20px #345d77;
+}
+
+.state-wide-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+  width: 20%;
+  padding: 2em;
+  margin: 1em;
+  background-color: #A8DADC;
+  box-shadow:  8px 8px 20px #345d77;
+
+}
