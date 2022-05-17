@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom"
 import "./Quiz.css";
-import Statement from "../Statement/Statement";
+import Statement from "../Statement2/Statement2";
 
 const Quiz = (props) => {
   const [formFields, setFormFields] = useState({
