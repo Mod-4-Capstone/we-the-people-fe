@@ -2,6 +2,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: scroll;
+  /* overflow: scroll; */
   height: 80%;
 }
