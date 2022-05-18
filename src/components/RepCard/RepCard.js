@@ -4,9 +4,7 @@ import "./RepCard.css"
 
 const RepCard = ({repData}) => {
 
-  console.log(repData)
-
-  return ( 
+  return (
     <div className="rep-card">
       <div className="bio-info">
         <div>
@@ -36,5 +34,5 @@ const RepCard = ({repData}) => {
     </div>
    );
 }
- 
+
 export default RepCard;
