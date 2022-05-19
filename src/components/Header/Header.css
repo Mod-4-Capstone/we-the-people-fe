@@ -14,15 +14,27 @@
   margin-left: 0.3em;
 }
 
+.state-dropdown {
+  margin-left: 4em;
+  font-family: 'Khula', sans-serif;
+  border-radius: 30px;
+  border: none;
+  padding: 0.2em;
+  font-size: 1rem;
+  border: none;
+}
+
 .home-btn {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
   font-size: 1.3rem;
   color: #1D3557;
   background-color: white;
   border-radius: 30px;
   border: none;
   font-family: 'Khula', sans-serif;
-  padding: 0.5em
+  padding: 0.5em 0.7em;
+  float: right;
 }
 
 
