@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
   return (
     <section className="footer">
-        <p>Authors:</p> 
+        <p>Contact Us:</p> 
         <a href="http://linkedin.com/in/blake-dempsey">Blake Dempsey</a>
         <a href="https://www.linkedin.com/in/conor-barthel/">Conor Barthel</a>
         <a href="https://www.linkedin.com/in/jessica-fatta/">Jessica Fatta</a>
