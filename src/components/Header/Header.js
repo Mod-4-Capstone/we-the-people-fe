@@ -13,7 +13,7 @@ const Header = () => {
       <h1 className="title">We The People</h1>
 
       {/* <label for="states">State:</label> */}
-      <select name="states" id="states">
+      <select name="states" className="state-dropdown" id="states">
         <option value="Alabma">Alabma</option>
         <option value="Alaska">Alaska</option>
         <option value="Arizona">Arizona</option>
