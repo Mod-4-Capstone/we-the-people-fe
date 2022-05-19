@@ -8,7 +8,21 @@
   font-size: 2.3rem;
   padding: .5em;
   color: white;
-  
+}
+
+.title {
+  margin-left: 0.3em;
+}
+
+.home-btn {
+  position: relative;
+  font-size: 1.3rem;
+  color: #1D3557;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  font-family: 'Khula', sans-serif;
+  padding: 0.5em
 }
 
 
