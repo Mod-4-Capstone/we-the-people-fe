@@ -84,7 +84,7 @@ const Quiz = (props) => {
           handleChange={handleChange}
         />
         <Statement
-          statement="There should be more restrictions on the process of purchasing a gun."
+          statement="There should be less restrictions on the process of purchasing a gun."
           name="nra"
           setFormFields={setFormFields}
           handleChange={handleChange}
@@ -108,20 +108,26 @@ const Quiz = (props) => {
           handleChange={handleChange}
         />
         <Statement
-          statement="The U.S. government should support a separation of church and state."
+          statement="Transgender athletes should be able to compete on teams that correspond to their gender identity."
           name="aclu"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
-          statement="The police should not be defunded"
+          statement="The police should not be defunded."
           name="national_association_of_police"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
-          statement="Marijuana should be federally legalized"
+          statement="Marijuana should be federally legalized."
           name="norml"
+          setFormFields={setFormFields}
+          handleChange={handleChange}
+        />
+        <Statement
+          statement="Candidates for office should have a limit on the amount of money they can spend campaigning."
+          name="end_citizens_united"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
