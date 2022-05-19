@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement2/Statement2";
+import { postRepsWithQuiz } from '../../apiCalls';
 
 const Quiz = (props) => {
   const [formFields, setFormFields] = useState({
@@ -31,6 +32,7 @@ const Quiz = (props) => {
       ...formFields,
     };
     props.setQuizResult(newQuizResult);
+    postRepsWithQuiz().then(data => console.log(data))
     setIsFormSubmitted(true)
   };
 
