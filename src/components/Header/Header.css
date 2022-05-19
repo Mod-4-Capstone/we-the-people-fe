@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 7rem;
   width: 100%;
@@ -10,7 +10,38 @@
   color: white;
   top: 0%;
   position: sticky;
+}
 
+.site-title, .state-dropdown-container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-left: 0.3em;
+}
+
+.state-dropdown {
+  margin-left: 4em;
+  font-family: 'Khula', sans-serif;
+  border-radius: 30px;
+  border: none;
+  padding: 0.2em;
+  font-size: 1rem;
+  border: none;
+}
+
+.home-btn {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+  color: #1D3557;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  font-family: 'Khula', sans-serif;
+  padding: 0.5em 0.7em;
+  float: right;
 }
 
 

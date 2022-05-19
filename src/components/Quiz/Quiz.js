@@ -14,7 +14,7 @@ const Quiz = (props) => {
     Q5: "",
     Q6: "",
     Q7: "",
-    Q8: "", // 0, 25, 50, 75, 100
+    Q8: "",
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState (false)
