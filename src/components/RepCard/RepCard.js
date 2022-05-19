@@ -4,9 +4,7 @@ import "./RepCard.css"
 
 const RepCard = ({repData}) => {
 
-  console.log(repData)
-
-  return ( 
+  return (
     <div className="rep-card">
       <div className="bio-info">
         <div>
@@ -23,18 +21,45 @@ const RepCard = ({repData}) => {
         </div>
       </div>
       <div className="rep-issues-container">
-        <p className="rep-issues">Abortion | Planned Parenthood: {repData.ratings.planned_parenthood}%</p>
-        <p className="rep-issues">Budget, Spending | Americans for Prosperity: {repData.ratings.americans_for_prosperity}%</p>
-        <p className="rep-issues">Civil Liberties | ACLU: {repData.ratings.aclu}%</p>
-        <p className="rep-issues">Campaign Finance | End Citizens United: {repData.ratings.end_citizens_united}%</p>
-        <p className="rep-issues">Criminal Justice | Nat'l Assoc. of Police Org: {repData.ratings.national_assoc_of_police_org}%</p>
-        <p className="rep-issues">Environment | Nat'l Parks Conservation Assoc.: {repData.ratings.national_parks_conservation_assoc}%</p>
-        <p className="rep-issues">Guns | NRA: {repData.ratings.national_rifle_assoc}%</p>
-        <p className="rep-issues">Immigration | NumbersUSA: {repData.ratings.numbers_usa}%</p>
-        <p className="rep-issues">Marijuana | Nat'l Cannabis Industry Assoc: {repData.ratings.national_cannabis_industry_assoc}%</p>
+        <details>
+          <summary>Abortion: You match 40% on this issue </summary>
+          <p className="rep-issues">Planned Parenthood: {repData.ratings.planned_parenthood}%</p>
+        </details>
+        <details>
+          <summary> Budget, Spending: You match 40% on this issue </summary>
+          <p className="rep-issues"> Americans for Prosperity: {repData.ratings.americans_for_prosperity}%</p>
+        </details>
+        <details>
+          <summary>Civil Liberties You match 40% on this issue </summary>
+          <p className="rep-issues"> ACLU: {repData.ratings.aclu}%</p>
+        </details>
+        <details>
+          <summary>Campaign Finance:  You match 40% on this issue </summary>
+          <p className="rep-issues"> End Citizens United: {repData.ratings.end_citizens_united}%</p>
+        </details>
+        <details>
+          <summary>Criminal Justice:  You match 40% on this issue </summary>
+          <p className="rep-issues"> Nat'l Assoc. of Police Org: {repData.ratings.national_assoc_of_police_org}%</p>
+        </details>
+        <details>
+          <summary>Environment: You match 40% on this issue </summary>
+          <p className="rep-issues"> Nat'l Parks Conservation Assoc.: {repData.ratings.national_parks_conservation_assoc}%</p>
+        </details>
+        <details>
+          <summary>Guns: You match 40% on this issue </summary>
+          <p className="rep-issues"> NRA: {repData.ratings.national_rifle_assoc}%</p>
+        </details>
+        <details>
+          <summary>Immigration: You match 40% on this issue </summary>
+          <p className="rep-issues"> NumbersUSA: {repData.ratings.numbers_usa}%</p>
+        </details>
+        <details>
+          <summary>Marijuana: You match 40% on this issue </summary>
+          <p className="rep-issues">  Nat'l Cannabis Industry Assoc: {repData.ratings.national_cannabis_industry_assoc}%</p>
+        </details>
       </div>
     </div>
    );
 }
- 
+
 export default RepCard;

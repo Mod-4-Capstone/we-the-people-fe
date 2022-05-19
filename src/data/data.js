@@ -1,4 +1,4 @@
-export const legislators = [
+ const legislatorsData = [
   {
     bio: {
       name: 'Diana DeGette',
@@ -129,3 +129,5 @@ export const legislators = [
     }
   }
 ]
+
+export default legislatorsData;

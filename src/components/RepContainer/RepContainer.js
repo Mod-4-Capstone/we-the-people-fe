@@ -1,18 +1,19 @@
-import React from "react"
+import React, { useContext } from "react"
 import RepCard from "../RepCard/RepCard";
 import "./RepContainer.css"
-import { legislators } from "../../data/data";
+import { DataContext } from '../../contexts/DataContext'
+// import { legislators } from "../../data/data";
 
 const RepContainer = () => {
-
+  const legislators = useContext(DataContext)
   const createRepCards = () => {
     return legislators.map(legislator => {
       return <RepCard repData={legislator}/>
     })
   }
-  
-  
-  return ( 
+
+
+  return (
     <section className="rep-container">
      {createRepCards()}
 
@@ -20,5 +21,5 @@ const RepContainer = () => {
     </section>
    );
 }
- 
+
 export default RepContainer;
