@@ -5,7 +5,7 @@ import Layout from '../Layout/Layout'
 import Quiz from '../Quiz/Quiz'
 import MainDash from '../MainDash/MainDash';
 import { DataContextProvider } from '../../contexts/DataContext'
-import { postRepsWithQuiz } from '../../apiCalls';
+
 
 
 const App = () => {
