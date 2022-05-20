@@ -33,9 +33,13 @@ const Quiz = (props) => {
     const newQuizResult = {
       id: Date.now,
       ...formFields,
-    };
+    }
+    repData.setCurrentQuizResult(newQuizResult)
     props.setQuizResult(newQuizResult);
-    postRepsWithQuiz(newQuizResult).then(data => repData.setLegislators(data.politicians.data))
+    postRepsWithQuiz(newQuizResult).then(data => {
+      repData.setLegislators(data.politicians.data)
+      repData.setSummaryStats(data.summary_statistics)
+    })
     setIsFormSubmitted(true)
   };
 
