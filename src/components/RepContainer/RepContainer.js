@@ -6,6 +6,7 @@ import { DataContext } from '../../contexts/DataContext'
 
 const RepContainer = () => {
   const legislators = useContext(DataContext)
+  console.log(legislators)
   const createRepCards = () => {
     return legislators.map(legislator => {
       return <RepCard repData={legislator}/>
