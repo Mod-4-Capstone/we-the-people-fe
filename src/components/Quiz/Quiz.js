@@ -7,7 +7,6 @@ import { DataContext } from "../../contexts/DataContext";
 
 const Quiz = (props) => {
   const repData = useContext(DataContext)
-  console.log(repData)
   const [formFields, setFormFields] = useState({
     age: "",
     zipcode: "",
