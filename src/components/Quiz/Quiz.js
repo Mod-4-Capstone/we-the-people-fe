@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Redirect } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement2/Statement2";
 import { postRepsWithQuiz } from '../../apiCalls';
+import { DataContext } from "../../contexts/DataContext";
 
 const Quiz = (props) => {
+  const repData = useContext(DataContext)
+  console.log(repData)
   const [formFields, setFormFields] = useState({
     age: "",
     zipcode: "",
@@ -33,7 +36,7 @@ const Quiz = (props) => {
       ...formFields,
     };
     props.setQuizResult(newQuizResult);
-    postRepsWithQuiz(newQuizResult).then(data => console.log(data))
+    postRepsWithQuiz(newQuizResult).then(data => repData.setLegislators(data.politicians.data))
     setIsFormSubmitted(true)
   };
 
