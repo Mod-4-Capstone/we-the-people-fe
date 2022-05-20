@@ -16,6 +16,7 @@ const App = () => {
     <div className="App">
       <Layout>
         <Switch>
+          <DataContextProvider>
           <Route exact path="/"
             render={() =>{
               return (
@@ -24,7 +25,6 @@ const App = () => {
               </>
           )}}
           />
-          <DataContextProvider>
             <Route exact path="/results-dashboard"
               render={() => <MainDash/> }>
             </Route>
