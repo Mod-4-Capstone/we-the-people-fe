@@ -5,7 +5,7 @@ const DataContext = createContext()
 
 const DataContextProvider = ({children}) => {
 
-  const [legislators, setLegislators] = useState({})
+  const [legislators, setLegislators] = useState([])
 
   return (
     <DataContext.Provider value={{legislators, setLegislators}}>
