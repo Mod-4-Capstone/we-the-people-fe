@@ -7,7 +7,7 @@ const RepContainer = () => {
   const legislators = useContext(DataContext)
   const createRepCards = () => {
     return legislators.legislators.map(legislator => {
-      return <RepCard repData={legislator}/>
+      return <RepCard key={legislator.id} repData={legislator}/>
     })
   }
 
