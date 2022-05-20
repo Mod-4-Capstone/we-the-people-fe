@@ -8,15 +8,16 @@ const Quiz = (props) => {
   const [formFields, setFormFields] = useState({
     age: "",
     zipcode: "",
-    planned_parenthood: "",
-    national_education_association: "",
-    nra: "",
-    national_parks_conservation: "",
-    americans_for_prosperity: "",
-    numbers_usa: "",
     aclu: "",
+    americans_for_prosperity: "",
+    end_citizens_united: "",
     national_association_of_police: "",
-    norml: ""
+    national_education_association: "",
+    national_parks_conservation: "",
+    norml: "",
+    nra: "",
+    numbers_usa: "",
+    planned_parenthood: "",
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState (false)
@@ -32,7 +33,7 @@ const Quiz = (props) => {
       ...formFields,
     };
     props.setQuizResult(newQuizResult);
-    postRepsWithQuiz().then(data => console.log(data))
+    postRepsWithQuiz(newQuizResult).then(data => console.log(data))
     setIsFormSubmitted(true)
   };
 
