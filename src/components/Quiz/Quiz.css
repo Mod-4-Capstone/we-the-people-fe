@@ -4,7 +4,6 @@
   justify-content: space-around;
   width: 80%;
   align-items: center;
-  /* overflow: scroll; */
   background-color: #F1FAEE;
   margin-bottom: 2em;
   margin-top: 2em;
@@ -26,7 +25,6 @@ select, input, button {
 
 .age-dropdown,
 .zipcode-input {
-  /* margin-top: 2em; */
   margin-bottom: 2em;
   width: 12em;
   border-radius: 50px;
@@ -38,7 +36,6 @@ select, input, button {
 .quiz-header {
   font-family: 'Khula', sans-serif;
   font-size: 20px;
-  /* margin-top: 15em; */
 }
 
 .submit-btn {
