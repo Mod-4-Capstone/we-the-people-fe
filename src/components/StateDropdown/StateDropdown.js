@@ -9,16 +9,14 @@ import { Link, Redirect } from "react-router-dom"
 const StateDropdown = (props) => {
 
   const repData = useContext(DataContext)
-  const [selectedState, setSelectedState] = useState('')
-  // const [isFormSubmitted, setIsFormSubmitted] = useState(false)
-
+  // const [selectedState, setSelectedState] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const emptyQuiz = {
       id: Date.now(),
       age: "",
-      state: selectedState,
+      state: props.selectedState,
       aclu: "",
       americans_for_prosperity: "",
       end_citizens_united: "",
@@ -37,13 +35,14 @@ const StateDropdown = (props) => {
       repData.setLegislators(data.politicians.data)
     })
   repData.setIsFormSubmitted(true)
+  props.setSelectedState('default')
   }
 
   return (
     <div className="state-dropdown-container">
       <p className="state-dropdown-description">See Representatives by State:</p>
         <form className='state-form-container' onSubmit ={(e) => handleSubmit(e)}>
-          <select name="states" className="state-dropdown" id="states" defaultValue="default" onChange={(e) => setSelectedState(e.target.value)}>
+          <select name="states" className="state-dropdown" id="states" defaultValue='default' onChange={(e) => props.setSelectedState(e.target.value)}>
             <option value ='default' disabled>select state</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
