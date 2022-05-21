@@ -22,7 +22,7 @@ const Quiz = (props) => {
     planned_parenthood: "",
   });
 
-  const [isFormSubmitted, setIsFormSubmitted] = useState (false)
+  // const [isFormSubmitted, setIsFormSubmitted] = useState (false)
 
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value });
@@ -40,7 +40,7 @@ const Quiz = (props) => {
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
     })
-    setIsFormSubmitted(true)
+    repData.setIsFormSubmitted(true)
   };
 
   return (
@@ -139,7 +139,7 @@ const Quiz = (props) => {
           handleChange={handleChange}
         />
         <button className='submit-btn' type="submit">Get my results!</button>
-        {isFormSubmitted && <Redirect to="/results-dashboard"/>}
+        {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
     </form>
   );
 };
