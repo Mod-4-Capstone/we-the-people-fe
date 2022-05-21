@@ -2,12 +2,15 @@ import React, { useState, useContext } from 'react'
 import './StateDropdown.css'
 import { postReps } from '../../apiCalls';
 import { DataContext } from "../../contexts/DataContext";
+import { Link, Redirect } from "react-router-dom"
+
 
 
 const StateDropdown = (props) => {
 
   const repData = useContext(DataContext)
   const [selectedState, setSelectedState] = useState('')
+  // const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
 
   const handleSubmit = (e) => {
@@ -30,8 +33,10 @@ const StateDropdown = (props) => {
     repData.setCurrentQuizResult(emptyQuiz)
     postReps(emptyQuiz, 'state')
     .then(data => {
+      console.log(data)
       repData.setLegislators(data.politicians.data)
     })
+  repData.setIsFormSubmitted(true)
   }
 
   return (
@@ -91,7 +96,8 @@ const StateDropdown = (props) => {
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
-          <button className='go-button'>Go!</button>
+            <button className='go-button'>Go!</button>
+            {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
         </form>
       </div>
     );
