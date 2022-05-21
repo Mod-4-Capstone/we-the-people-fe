@@ -8,9 +8,10 @@ const DataContextProvider = ({children}) => {
   const [legislators, setLegislators] = useState([])
   const [summaryStats, setSummaryStats] = useState({})
   const [currentQuizResult, setCurrentQuizResult] = useState({})
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
   return (
-    <DataContext.Provider value={{legislators, setLegislators, summaryStats, setSummaryStats, currentQuizResult, setCurrentQuizResult}}>
+    <DataContext.Provider value={{legislators, setLegislators, summaryStats, setSummaryStats, currentQuizResult, setCurrentQuizResult, isFormSubmitted, setIsFormSubmitted}}>
       {legislators && children}
     </DataContext.Provider>
   )
