@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './StateDropdown.css'
 
+
 const StateDropdown = () => {
+
+  const [selectedState, setSelectedState] = useState('')
+
   return (
     <div className="state-dropdown-container">
       <p className="state-dropdown-description">See Representatives by State:</p>
         <div className='state-form-container'>
-          <select name="states" className="state-dropdown" id="states" defaultValue="default">
-            <option value ='default' disabled>select state</option> 
+          <select name="states" className="state-dropdown" id="states" defaultValue="default" onChange={(e) => setSelectedState(e.target.value)}>
+            <option value ='default' disabled>select state</option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -63,5 +67,5 @@ const StateDropdown = () => {
       </div>
     );
 }
- 
+
 export default StateDropdown;
