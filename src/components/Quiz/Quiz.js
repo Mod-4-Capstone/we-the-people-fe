@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, Redirect } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement2/Statement2";
-import { postRepsWithQuiz } from '../../apiCalls';
+import { postReps } from '../../apiCalls';
 import { DataContext } from "../../contexts/DataContext";
 
 const Quiz = (props) => {
@@ -36,7 +36,7 @@ const Quiz = (props) => {
     }
     repData.setCurrentQuizResult(newQuizResult)
     props.setQuizResult(newQuizResult);
-    postRepsWithQuiz(newQuizResult).then(data => {
+    postReps(newQuizResult, 'zipcode').then(data => {
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
     })

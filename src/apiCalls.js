@@ -1,5 +1,5 @@
-const postRepsWithQuiz = (newQuizResult) => {
-  return fetch('https://we-the-people-be.herokuapp.com/api/v2/zipcode_with_quiz', {
+const postReps = (newQuizResult, type) => {
+  return fetch(`https://we-the-people-be.herokuapp.com/api/v2/${type}_with_quiz`, {
     method: 'POST',
     body: JSON.stringify(newQuizResult),
     headers: {
@@ -8,4 +8,4 @@ const postRepsWithQuiz = (newQuizResult) => {
   }).then(response => response.json())
 }
 
-export { postRepsWithQuiz }
+export { postReps }

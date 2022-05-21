@@ -14,9 +14,9 @@ const App = () => {
 
   return (
     <div className="App">
+    <DataContextProvider>
       <Layout>
         <Switch>
-          <DataContextProvider>
           <Route exact path="/"
             render={() =>{
               return (
@@ -28,10 +28,10 @@ const App = () => {
             <Route exact path="/results-dashboard"
               render={() => <MainDash/> }>
             </Route>
-          </DataContextProvider>
         </Switch>
 
       </Layout>
+      </DataContextProvider>
 
 
     </div>

@@ -1,16 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './StateDropdown.css'
+import { postReps } from '../../apiCalls';
+import { DataContext } from "../../contexts/DataContext";
 
 
-const StateDropdown = () => {
+const StateDropdown = (props) => {
 
+  const repData = useContext(DataContext)
   const [selectedState, setSelectedState] = useState('')
 
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const emptyQuiz = {
+      id: Date.now(),
+      age: "",
+      state: selectedState,
+      aclu: "",
+      americans_for_prosperity: "",
+      end_citizens_united: "",
+      national_association_of_police: "",
+      national_education_association: "",
+      national_parks_conservation: "",
+      norml: "",
+      nra: "",
+      numbers_usa: "",
+      planned_parenthood: "",
+    }
+    repData.setCurrentQuizResult(emptyQuiz)
+    postReps(emptyQuiz, 'state')
+    .then(data => {
+      repData.setLegislators(data.politicians.data)
+    })
+  }
 
   return (
     <div className="state-dropdown-container">
       <p className="state-dropdown-description">See Representatives by State:</p>
-        <form className='state-form-container'>
+        <form className='state-form-container' onSubmit ={(e) => handleSubmit(e)}>
           <select name="states" className="state-dropdown" id="states" defaultValue="default" onChange={(e) => setSelectedState(e.target.value)}>
             <option value ='default' disabled>select state</option>
             <option value="AL">Alabama</option>
