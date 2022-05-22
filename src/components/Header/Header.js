@@ -12,7 +12,7 @@ const Header = () => {
 
   const resetSelectedState = () => {
     repData.setIsFormSubmitted(false);
-    return !repData.isFormSubmitted ? setSelectedState('default') : console.log('NOT WORKING');
+    // return !repData.isFormSubmitted ? setSelectedState('default') : console.log('NOT WORKING');
 
   }
 
