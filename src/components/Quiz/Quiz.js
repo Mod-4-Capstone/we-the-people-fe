@@ -38,9 +38,9 @@ const Quiz = (props) => {
       console.log('ALL DATA', data)
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
-      console.log('SUMMARY STATS', repData.summaryStats)
     })
     repData.setIsFormSubmitted(true)
+    console.log('SUMMARYSTATS', repData.summaryStats)
   };
 
   return (

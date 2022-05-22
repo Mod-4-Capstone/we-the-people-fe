@@ -7,11 +7,13 @@ const QuizResults = () => {
   const repData = useContext(DataContext)
 
   const getStateAverageStats = () => {
+    console.log('WHAT IS THIS', repData.summaryStats.data.attributes)
     const groupObj = repData.summaryStats.data.attributes
     const groupKeys = Object.keys(repData.summaryStats.data.attributes)
     const totalStat = groupKeys.reduce((acc, sigKey) => {
       return acc += groupObj[sigKey].user_difference
     }, 0)
+    console.log('AVERAGESTAT', 100 - (totalStat/groupKeys.length).toFixed(1))
     return 100 - (totalStat/groupKeys.length).toFixed(1)
   }
 
@@ -33,7 +35,7 @@ const QuizResults = () => {
         <p>You are {repData.currentQuizResult.end_citizens_united}% in support of campaign spending limits.</p>
       </section>
       <section className="state-wide-comparison">
-        {repData.summaryStats && <h2>Your beliefs match {getStateAverageStats()}% with your state reps</h2>}
+        {repData.summaryStats.data.attributes.nra && <h2>Your beliefs match {getStateAverageStats()}% with your state reps</h2>}
       </section>
     </section>
    );
