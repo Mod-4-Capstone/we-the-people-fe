@@ -22,8 +22,6 @@ const Quiz = (props) => {
     planned_parenthood: "",
   });
 
-  // const [isFormSubmitted, setIsFormSubmitted] = useState (false)
-
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value });
   };
@@ -103,7 +101,7 @@ const Quiz = (props) => {
           handleChange={handleChange}
         />
         <Statement
-          statement="The U.S. government should raise the federal minimum wage."
+          statement="The U.S. government should not raise the federal minimum wage."
           name="americans_for_prosperity"
           setFormFields={setFormFields}
           handleChange={handleChange}
