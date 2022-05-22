@@ -35,8 +35,10 @@ const Quiz = (props) => {
     repData.setCurrentQuizResult(newQuizResult)
     props.setQuizResult(newQuizResult);
     postReps(newQuizResult, 'zipcode').then(data => {
+      console.log('ALL DATA', data)
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
+      console.log('SUMMARY STATS', repData.summaryStats)
     })
     repData.setIsFormSubmitted(true)
   };
