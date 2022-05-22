@@ -9,7 +9,6 @@ import { Link, Redirect } from "react-router-dom"
 const StateDropdown = (props) => {
 
   const repData = useContext(DataContext)
-  // const [selectedState, setSelectedState] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +30,6 @@ const StateDropdown = (props) => {
     repData.setCurrentQuizResult(emptyQuiz)
     postReps(emptyQuiz, 'state')
     .then(data => {
-      console.log(data)
       repData.setLegislators(data.politicians.data)
     })
   repData.setIsFormSubmitted(true)
