@@ -45,7 +45,21 @@ const Quiz = (props) => {
 
   return (
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
-      <p className="quiz-header">Here's why you should take our quiz...</p>
+      <div className="quiz-header-container">
+        <section className="quiz-header">
+          <div className="gender-hook">
+            <p className="gender">Female</p> 
+            <p className="us-population-rep">U.S. Population: 50.8%</p>
+            <p className="congress-rep">117th Congress: 27.5%</p>
+          </div>  
+          <div>The Constitution provides for proportional representation in the U.S. House of Representatives and the seats in the House are apportioned based on state population according to the constitutionally mandated Census.  — U.S. Constitution, Amendment XIV, section 2</div>  
+          <div className="age-hook">
+            <p className="age">65 or older</p> 
+            <p className="us-population-rep">U.S. Population: 16.5%</p>
+            <p className="congress-rep">117th Congress: 40%</p>
+          </div>  
+        </section>
+      </div>
         <div className="input-container">
           <select
             required
