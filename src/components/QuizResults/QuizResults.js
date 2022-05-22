@@ -5,6 +5,16 @@ import { DataContext } from '../../contexts/DataContext'
 const QuizResults = () => {
 
   const repData = useContext(DataContext)
+
+  const getStateAverageStats = () => {
+    const groupObj = repData.summaryStats.data.attributes
+    const groupKeys = Object.keys(repData.summaryStats.data.attributes)
+    const totalStat = groupKeys.reduce((acc, sigKey) => {
+      return acc += groupObj[sigKey].user_difference
+    }, 0)
+    return 100 - (totalStat/groupKeys.length).toFixed(1)
+  }
+
   return (
     <section className="quiz-results-container">
       <section className="user-quiz-results">
@@ -23,7 +33,7 @@ const QuizResults = () => {
         <p>You are {repData.currentQuizResult.end_citizens_united}% in support of campaign spending limits.</p>
       </section>
       <section className="state-wide-comparison">
-        <h2>Your beliefs match 40% with your state reps</h2>
+        {repData.summaryStats && <h2>Your beliefs match {getStateAverageStats()}% with your state reps</h2>}
       </section>
     </section>
    );

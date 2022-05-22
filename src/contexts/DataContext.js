@@ -10,6 +10,7 @@ const DataContextProvider = ({children}) => {
   const [currentQuizResult, setCurrentQuizResult] = useState({})
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 
+console.log(summaryStats)
   return (
     <DataContext.Provider value={{legislators, setLegislators, summaryStats, setSummaryStats, currentQuizResult, setCurrentQuizResult, isFormSubmitted, setIsFormSubmitted}}>
       {legislators && children}
