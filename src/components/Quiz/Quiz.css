@@ -21,8 +21,6 @@
   justify-content: center;
 }
 
-
-
 .quiz {
   display: flex;
   flex-direction: column;
@@ -38,10 +36,15 @@
   -8px -8px 30px #5699c3;
 }
 
-select, input, button {
+select, input, button, .input-tagline {
   font-family: 'Khula', sans-serif;
 }
 
+.input-tagline {
+  padding: 0.3rem;
+  font-size: large;
+  text-align: center;
+}
 .input-container {
   display: flex;
   width: 50%;
