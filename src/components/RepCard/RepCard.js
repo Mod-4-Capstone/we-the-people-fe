@@ -16,7 +16,7 @@ const RepCard = ({repData}) => {
           <p className="bio-text">Gender: {repData.attributes.biography.gender}</p>
           <p className="bio-text">Years in office: {repData.attributes.biography.years_in_office}</p>
           <p className="bio-text">Up for re-election in: {repData.attributes.biography.next_election}</p>
-          <p className="rep-match">{(repData.attributes.compatibility).toFixed(1)}% match with your beliefs</p>
+          {repData.attributes.compatibility ? <p className="rep-match">{(repData.attributes.compatibility).toFixed(1)}% match with your beliefs</p> : <p className="rep-match">Information unavailable.</p>}
         </div>
       </div>
       <div className="rep-issues-container">
