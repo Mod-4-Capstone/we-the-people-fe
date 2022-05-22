@@ -10,8 +10,8 @@ const RepCard = ({repData}) => {
           <img src={repData.attributes.biography.photo} className="rep-img"/>
         </div>
         <div className="bio-text-container">
-          <p className="bio-text">{repData.attributes.biography.name}</p>
-          <p className="bio-text">State: {repData.attributes.biography.district}</p>
+          <p className="bio-text">{repData.attributes.biography.congressional_type} {repData.attributes.biography.name}</p>
+          {repData.attributes.biography.congressional_type === 'Representative' ?  <p className="bio-text">District: {repData.attributes.biography.district}</p> :  <p className="bio-text">State: {repData.attributes.biography.district}</p>}
           <p className="bio-text">Age: {repData.attributes.biography.age}</p>
           <p className="bio-text">Gender: {repData.attributes.biography.gender}</p>
           <p className="bio-text">Years in office: {repData.attributes.biography.years_in_office}</p>
