@@ -33,23 +33,28 @@ const Quiz = (props) => {
       ...formFields,
     }
     repData.setCurrentQuizResult(newQuizResult)
+    repData.setIsLoading(true)
+    
     postReps(newQuizResult, 'zipcode').then(data => {
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
+      repData.setIsLoading(false)
     })
+    .catch(error=>console.warn(error))
+
     repData.setIsFormSubmitted(true)
   };
 
   return (
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
       <div className="quiz-header-container">
-        <section className="quiz-header">
+      <p className="quote">The Constitution provides for proportional representation in the U.S. House of Representatives and the seats in the House are apportioned based on state population according to the constitutionally mandated Census.  — U.S. Constitution, Amendment XIV, section 2</p>  
+        <section className="hook-header">
           <div className="gender-hook">
             <p className="gender">Female</p> 
             <p className="us-population-rep">U.S. Population: 50.8%</p>
             <p className="congress-rep">117th Congress: 27.5%</p>
           </div>  
-          <div>The Constitution provides for proportional representation in the U.S. House of Representatives and the seats in the House are apportioned based on state population according to the constitutionally mandated Census.  — U.S. Constitution, Amendment XIV, section 2</div>  
           <div className="age-hook">
             <p className="age">65 or older</p> 
             <p className="us-population-rep">U.S. Population: 16.5%</p>
@@ -93,60 +98,70 @@ const Quiz = (props) => {
       </div>
         <Statement
           statement="Abortion should be legalized at the federal level."
+          className="statement"
           name="planned_parenthood"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="Public schools should be better funded."
+          className="statement"
           name="national_education_association"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="There should be less restrictions on the process of purchasing a gun."
+          className="statement"
           name="nra"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="The U.S. government should increase environmental regulations in order to mitigate climate change."
+          className="statement"
           name="national_parks_conservation"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="The U.S. government should not raise the federal minimum wage."
+          className="statement"
           name="americans_for_prosperity"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="The U.S. government should build a wall along the southern border."
+          className="statement"
           name="numbers_usa"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="Transgender athletes should be able to compete on teams that correspond to their gender identity."
+          className="statement"
           name="aclu"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="The police should not be defunded."
+          className="statement"
           name="national_association_of_police"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="Marijuana should be federally legalized."
+          className="statement"
           name="norml"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="Candidates for office should have a limit on the amount of money they can spend campaigning."
+          className="statement"
           name="end_citizens_united"
           setFormFields={setFormFields}
           handleChange={handleChange}
