@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import legislatorsData from "../data/data";
 
 const DataContext = createContext();
 
