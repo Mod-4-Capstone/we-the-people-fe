@@ -1,24 +1,41 @@
 .quiz-header-container {
   padding: 1rem;
-  background-color : #1D3557;
+  background-color : #457B9D;
   border-radius: 30px;
   margin: 1rem;
-  padding:1rem;
-
+  padding: 1rem;
 }
 
-.quiz-header {
+.quote {
+  text-align: center;
+  color: white;
+  font-size: larger;
+}
+
+.hook-header {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color : #1D3557;
+  grid-template-columns: repeat(2, 1fr);
+  background-color : #457B9D;
   color: white;
   text-align: center;
+  margin-top: 1em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.age-dropdown {
+  margin-right: 1em;
 }
 
 .gender-hook, .age-hook {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-weight: bold;
 }
 
 .quiz {
@@ -36,7 +53,7 @@
   -8px -8px 30px #5699c3;
 }
 
-select, input, button, .input-tagline {
+select, input, button, .quote, .input-tagline, .gender-hook, .age-hook {
   font-family: 'Khula', sans-serif;
 }
 
@@ -76,4 +93,49 @@ select, input, button, .input-tagline {
   margin-top: .5em;
   font-family: 'Khula', sans-serif;
   cursor: pointer;
+}
+
+.statement {
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .likert {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 0;
+  }
+
+  .quiz-header-container {
+    width: 100%;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hook-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .age-hook {
+    margin-top: 1em;
+  }
+
+  .quiz {
+     padding: 1em;
+  }
+
+  .quote {
+  font-size: large;
+  }
+  
+  .age-dropdown {
+    margin-right: 0;
+  }
 }
