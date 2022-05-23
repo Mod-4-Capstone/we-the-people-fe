@@ -1,12 +1,11 @@
 .rep-card {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   box-sizing: border-box;
   border-radius: 5px;
   height: 30rem;
   width: 30rem;
-  padding: 2em;
+  padding-top: 0;
   margin: 2em;
   background-color: #F1FAEE;
   box-shadow:  8px 8px 30px #345d77,
@@ -50,8 +49,21 @@
   margin: 1em 0 1em 0;
   padding-top: 1em;
   overflow-y: scroll;
+  padding: 1em;
+
 }
 
 .details-arrow {
   cursor: pointer;
+}
+
+.reelection-text {
+  background-color: #E63946;
+  color: white;
+  font-weight:700;
+  padding: .5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  margin: 0 0 1em 0;
 }
