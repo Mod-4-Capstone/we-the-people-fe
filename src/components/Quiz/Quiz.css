@@ -1,3 +1,26 @@
+.quiz-header-container {
+  padding: 1rem;
+  background-color : #1D3557;
+  border-radius: 30px;
+  margin: 1rem;
+  padding:1rem;
+
+}
+
+.quiz-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color : #1D3557;
+  color: white;
+  text-align: center;
+}
+
+.gender-hook, .age-hook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .quiz {
   display: flex;
   flex-direction: column;
@@ -13,10 +36,15 @@
   -8px -8px 30px #5699c3;
 }
 
-select, input, button {
+select, input, button, .input-tagline {
   font-family: 'Khula', sans-serif;
 }
 
+.input-tagline {
+  padding: 0.3rem;
+  font-size: large;
+  text-align: center;
+}
 .input-container {
   display: flex;
   width: 50%;

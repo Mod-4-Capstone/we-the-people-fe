@@ -45,39 +45,55 @@ const Quiz = (props) => {
 
   return (
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
-      <p className="quiz-header">Here's why you should take our quiz...</p>
-        <div className="input-container">
-          <select
-            required
-            className="age-dropdown"
-            defaultValue="default"
-            name="age"
-            onChange={(e) => handleChange(e)}
-          >
-            <option value="default" disabled>
-              Select your Age Range
-            </option>
-            <option value="18-28">18-28</option>
-            <option value="29-39">29-39</option>
-            <option value="40-50">40-50</option>
-            <option value="51-61">51-61</option>
-            <option value="62-70">62-70</option>
-            <option value="70+">70+</option>
-            <option value="deferred">Prefer not to say</option>
-          </select>
-          <input
-            required
-            className="zipcode-input"
-            type="number"
-            placeholder="Enter your zipcode"
-            name="zipcode"
-            min="00501"
-            max="99950"
-            value={formFields.zipcode}
-            onChange={(e) => handleChange(e)}
-          ></input>
-        </div>
-
+      <div className="quiz-header-container">
+        <section className="quiz-header">
+          <div className="gender-hook">
+            <p className="gender">Female</p> 
+            <p className="us-population-rep">U.S. Population: 50.8%</p>
+            <p className="congress-rep">117th Congress: 27.5%</p>
+          </div>  
+          <div>The Constitution provides for proportional representation in the U.S. House of Representatives and the seats in the House are apportioned based on state population according to the constitutionally mandated Census.  — U.S. Constitution, Amendment XIV, section 2</div>  
+          <div className="age-hook">
+            <p className="age">65 or older</p> 
+            <p className="us-population-rep">U.S. Population: 16.5%</p>
+            <p className="congress-rep">117th Congress: 40%</p>
+          </div>  
+        </section>
+      </div>
+      <section className="input-tagline">
+        Congress may not look like you, but do they think like you? Take the quiz to find out!
+      </section>
+      <div className="input-container">
+        <select
+          required
+          className="age-dropdown"
+          defaultValue="default"
+          name="age"
+          onChange={(e) => handleChange(e)}
+        >
+           <option value="default" disabled>
+            Select your Age Range
+          </option>
+          <option value="18-28">18-28</option>
+          <option value="29-39">29-39</option>
+          <option value="40-50">40-50</option>
+          <option value="51-61">51-61</option>
+          <option value="62-70">62-70</option>
+          <option value="70+">70+</option>
+          <option value="deferred">Prefer not to say</option>
+        </select>
+        <input
+          required
+          className="zipcode-input"
+          type="number"
+          placeholder="Enter your zipcode"
+          name="zipcode"
+          min="00501"
+          max="99950"
+          value={formFields.zipcode}
+          onChange={(e) => handleChange(e)}
+        ></input>
+      </div>
         <Statement
           statement="Abortion should be legalized at the federal level."
           name="planned_parenthood"
