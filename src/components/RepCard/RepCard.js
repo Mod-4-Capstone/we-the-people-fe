@@ -3,59 +3,58 @@ import "./RepCard"
 import "./RepCard.css"
 
 const RepCard = ({repData}) => {
-
   return (
     <div className="rep-card">
       <div className="bio-info">
         <div>
-          <img src={repData.bio.picture} className="rep-img"/>
+          <img src={repData.attributes.biography.photo} className="rep-img"/>
         </div>
         <div className="bio-text-container">
-          <p className="bio-text">{repData.bio.name}</p>
-          <p className="bio-text">State: {repData.bio.state}</p>
-          <p className="bio-text">Age: {repData.bio.age}</p>
-          <p className="bio-text">Gender: {repData.bio.gender}</p>
-          <p className="bio-text">Years in office: {repData.bio.years_in_office}</p>
-          <p className="bio-text">Up for re-election in: {repData.bio.next_reelection_yr}</p>
-          <p className="rep-match">90% match with your beliefs</p>
+          <p className="bio-text">{repData.attributes.biography.name}</p>
+          <p className="bio-text">State: {repData.attributes.biography.district}</p>
+          <p className="bio-text">Age: {repData.attributes.biography.age}</p>
+          <p className="bio-text">Gender: {repData.attributes.biography.gender}</p>
+          <p className="bio-text">Years in office: {repData.attributes.biography.years_in_office}</p>
+          <p className="bio-text">Up for re-election in: {repData.attributes.biography.next_election}</p>
+          {repData.attributes.compatibility ? <p className="rep-match">{(repData.attributes.compatibility).toFixed(1)}% match with your beliefs</p> : <p className="rep-match">Information unavailable.</p>}
         </div>
       </div>
       <div className="rep-issues-container">
-        <details>
-          <summary>Abortion: You match 40% on this issue </summary>
-          <p className="rep-issues">Planned Parenthood: {repData.ratings.planned_parenthood}%</p>
+        <details className="details-arrow">
+          <summary>Abortion: You match {(100 - repData.attributes.user_comparison.planned_parenthood)}% on this issue </summary>
+          <p className="rep-issues">Planned Parenthood: {repData.attributes.rating.planned_parenthood}%</p>
         </details>
-        <details>
-          <summary> Budget, Spending: You match 40% on this issue </summary>
-          <p className="rep-issues"> Americans for Prosperity: {repData.ratings.americans_for_prosperity}%</p>
+        <details className="details-arrow">
+          <summary> Budget, Spending: You match {(100 - repData.attributes.user_comparison.americans_for_prosperity)}% on this issue </summary>
+          <p className="rep-issues"> Americans for Prosperity: {repData.attributes.user_comparison.americans_for_prosperity}%</p>
         </details>
-        <details>
-          <summary>Civil Liberties You match 40% on this issue </summary>
-          <p className="rep-issues"> ACLU: {repData.ratings.aclu}%</p>
+        <details className="details-arrow">
+          <summary>Civil Liberties You match {(100 - repData.attributes.user_comparison.aclu)}% on this issue </summary>
+          <p className="rep-issues"> ACLU: {repData.attributes.rating.aclu}%</p>
         </details>
-        <details>
-          <summary>Campaign Finance:  You match 40% on this issue </summary>
-          <p className="rep-issues"> End Citizens United: {repData.ratings.end_citizens_united}%</p>
+        <details className="details-arrow">
+          <summary>Campaign Finance:  You match {(100 - repData.attributes.user_comparison.end_citizens_united)}% on this issue </summary>
+          <p className="rep-issues"> End Citizens United: {repData.attributes.rating.end_citizens_united}%</p>
         </details>
-        <details>
-          <summary>Criminal Justice:  You match 40% on this issue </summary>
-          <p className="rep-issues"> Nat'l Assoc. of Police Org: {repData.ratings.national_assoc_of_police_org}%</p>
+        <details className="details-arrow">
+          <summary>Criminal Justice:  You match {(100 - repData.attributes.user_comparison.national_association_of_police)}% on this issue </summary>
+          <p className="rep-issues"> Nat'l Assoc. of Police Org: {repData.attributes.rating.national_association_of_police}%</p>
         </details>
-        <details>
-          <summary>Environment: You match 40% on this issue </summary>
-          <p className="rep-issues"> Nat'l Parks Conservation Assoc.: {repData.ratings.national_parks_conservation_assoc}%</p>
+        <details className="details-arrow">
+          <summary>Environment: You match {(100 - repData.attributes.rating.national_parks_conservation)}% on this issue </summary>
+          <p className="rep-issues"> Nat'l Parks Conservation Assoc.: {repData.attributes.rating.national_parks_conservation}%</p>
         </details>
-        <details>
-          <summary>Guns: You match 40% on this issue </summary>
-          <p className="rep-issues"> NRA: {repData.ratings.national_rifle_assoc}%</p>
+        <details className="details-arrow">
+          <summary>Guns: You match {(100 - repData.attributes.rating.nra)}% on this issue </summary>
+          <p className="rep-issues"> NRA: {repData.attributes.rating.nra}%</p>
         </details>
-        <details>
-          <summary>Immigration: You match 40% on this issue </summary>
-          <p className="rep-issues"> NumbersUSA: {repData.ratings.numbers_usa}%</p>
+        <details className="details-arrow">
+          <summary>Immigration: You match {(100 - repData.attributes.rating.numbers_usa)}% on this issue </summary>
+          <p className="rep-issues"> NumbersUSA: {repData.attributes.rating.numbers_usa}%</p>
         </details>
-        <details>
-          <summary>Marijuana: You match 40% on this issue </summary>
-          <p className="rep-issues">  Nat'l Cannabis Industry Assoc: {repData.ratings.national_cannabis_industry_assoc}%</p>
+        <details className="details-arrow">
+          <summary>Marijuana: You match {(100 - repData.attributes.rating.norml)}% on this issue </summary>
+          <p className="rep-issues">  Nat'l Cannabis Industry Assoc: {repData.attributes.rating.norml}%</p>
         </details>
       </div>
     </div>

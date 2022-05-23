@@ -7,12 +7,14 @@ import MainDash from '../MainDash/MainDash';
 import { DataContextProvider } from '../../contexts/DataContext'
 
 
+
 const App = () => {
   const [legislators, setLegislators] = useState([])
   const [quizResult, setQuizResult] = useState({})
 
   return (
     <div className="App">
+    <DataContextProvider>
       <Layout>
         <Switch>
           <Route exact path="/"
@@ -23,14 +25,13 @@ const App = () => {
               </>
           )}}
           />
-          <DataContextProvider>
             <Route exact path="/results-dashboard"
               render={() => <MainDash/> }>
             </Route>
-          </DataContextProvider>
         </Switch>
 
       </Layout>
+      </DataContextProvider>
 
 
     </div>

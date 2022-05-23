@@ -1,0 +1,35 @@
+.state-dropdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #457B9D;
+  border-radius: 15px;
+  font-family: 'Khula', sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.state-dropdown, .go-button {
+  font-family: 'Khula', sans-serif;
+  border-radius: 30px;
+  border: none;
+  padding: 0.2em;
+  font-size: 1rem;
+  border: none;
+  align-self: center;
+  text-align: center;
+}
+
+.go-button {
+  background-color: #E63946;
+  color: white;
+  padding: 0.58rem;
+  outline: 2px, solid, #1D3557;
+}
+
+.state-form-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}

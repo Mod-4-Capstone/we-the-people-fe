@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, Redirect } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement2/Statement2";
+import { postReps } from '../../apiCalls';
+import { DataContext } from "../../contexts/DataContext";
 
 const Quiz = (props) => {
+  const repData = useContext(DataContext)
   const [formFields, setFormFields] = useState({
     age: "",
     zipcode: "",
-    Q1: "",
-    Q2: "",
-    Q3: "",
-    Q4: "",
-    Q5: "",
-    Q6: "",
-    Q7: "",
-    Q8: "",
+    aclu: "",
+    americans_for_prosperity: "",
+    end_citizens_united: "",
+    national_association_of_police: "",
+    national_education_association: "",
+    national_parks_conservation: "",
+    norml: "",
+    nra: "",
+    numbers_usa: "",
+    planned_parenthood: "",
   });
-
-  const [isFormSubmitted, setIsFormSubmitted] = useState (false)
 
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value });
@@ -28,9 +31,16 @@ const Quiz = (props) => {
     const newQuizResult = {
       id: Date.now,
       ...formFields,
-    };
+    }
+    repData.setCurrentQuizResult(newQuizResult)
     props.setQuizResult(newQuizResult);
-    setIsFormSubmitted(true)
+    postReps(newQuizResult, 'zipcode').then(data => {
+      console.log('ALL DATA', data)
+      repData.setLegislators(data.politicians.data)
+      repData.setSummaryStats(data.summary_statistics)
+    })
+    repData.setIsFormSubmitted(true)
+    console.log('SUMMARYSTATS', repData.summaryStats)
   };
 
   return (
@@ -70,54 +80,66 @@ const Quiz = (props) => {
 
         <Statement
           statement="Abortion should be legalized at the federal level."
-          name="Q1"
+          name="planned_parenthood"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="Public schools should be better funded."
-          name="Q2"
+          name="national_education_association"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
-          statement="Healthcare should be universal."
-          name="Q3"
-          setFormFields={setFormFields}
-          handleChange={handleChange}
-        />
-        <Statement
-          statement="There should be more restrictions on the process of purchasing a gun."
-          name="Q4"
+          statement="There should be less restrictions on the process of purchasing a gun."
+          name="nra"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="The U.S. government should increase environmental regulations in order to mitigate climate change."
-          name="Q5"
+          name="national_parks_conservation"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
-          statement="The U.S. government should raise the federal minimum wage."
-          name="Q6"
+          statement="The U.S. government should not raise the federal minimum wage."
+          name="americans_for_prosperity"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
           statement="The U.S. government should build a wall along the southern border."
-          name="Q7"
+          name="numbers_usa"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <Statement
-          statement="The U.S. government should support a separation of church and state."
-          name="Q8"
+          statement="Transgender athletes should be able to compete on teams that correspond to their gender identity."
+          name="aclu"
+          setFormFields={setFormFields}
+          handleChange={handleChange}
+        />
+        <Statement
+          statement="The police should not be defunded."
+          name="national_association_of_police"
+          setFormFields={setFormFields}
+          handleChange={handleChange}
+        />
+        <Statement
+          statement="Marijuana should be federally legalized."
+          name="norml"
+          setFormFields={setFormFields}
+          handleChange={handleChange}
+        />
+        <Statement
+          statement="Candidates for office should have a limit on the amount of money they can spend campaigning."
+          name="end_citizens_united"
           setFormFields={setFormFields}
           handleChange={handleChange}
         />
         <button className='submit-btn' type="submit">Get my results!</button>
-        {isFormSubmitted && <Redirect to="/results-dashboard"/>}
+        {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
     </form>
   );
 };

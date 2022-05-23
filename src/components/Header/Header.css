@@ -12,23 +12,13 @@
   position: sticky;
 }
 
-.site-title, .state-dropdown-container {
+.site-title {
   display: flex;
   align-items: center;
 }
 
 .title {
   margin-left: 0.3em;
-}
-
-.state-dropdown {
-  margin-left: 4em;
-  font-family: 'Khula', sans-serif;
-  border-radius: 30px;
-  border: none;
-  padding: 0.2em;
-  font-size: 1rem;
-  border: none;
 }
 
 .home-btn {
