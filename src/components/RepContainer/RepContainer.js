@@ -29,15 +29,3 @@ const RepContainer = () => {
 }
 
 export default RepContainer;
-
-
-
-/*
-
-TO FIX
--> California & Georgia, reps have no districts, all are listed as Senators with their district as CA
--> Years in office and re-election years don't all look accurate. Not sure if that's coming right from the API or if it's going through some calculations?
--> Need condition in RepCard if repData.attributes.rating.planned_parenthood is null to show default data
-
-
-*/ 
