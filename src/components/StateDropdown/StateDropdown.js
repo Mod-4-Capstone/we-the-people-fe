@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import './StateDropdown.css'
 import { postReps } from '../../apiCalls';
 import { DataContext } from "../../contexts/DataContext";
-import { Link, Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom"
 
 
 
