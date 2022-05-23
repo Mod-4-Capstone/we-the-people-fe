@@ -10,7 +10,7 @@ const RepCard = ({repData}) => {
       </div>
       <div className="bio-info">
         <div>
-          <img src={repData.attributes.biography.photo} className="rep-img"/>
+          <img src={repData.attributes.biography.photo} alt="representative" className="rep-img"/>
         </div>
         <div className="bio-text-container">
           <p className="bio-text">{repData.attributes.biography.congressional_type} {repData.attributes.biography.name}</p>
