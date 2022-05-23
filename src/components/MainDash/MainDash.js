@@ -10,7 +10,7 @@ const MainDash = () => {
 
   return (
     <section className="main-dash">
-    {repData.currentQuizResult.planned_parenthood && <QuizResults />}
+    {repData.currentQuizResult.nra && <QuizResults />}
     <RepContainer />
     </section>
     );
