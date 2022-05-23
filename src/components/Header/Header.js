@@ -27,7 +27,7 @@ const Header = () => {
 
         {location.pathname === "/results-dashboard" &&
           <Link to="/">
-            <button className="home-btn" onClick={() => resetFormsForHome()}>Home</button>
+            <button className="home-btn" onClick={() => resetFormsForHome()}>Start Over</button>
           </Link>}
     </section>
   )
