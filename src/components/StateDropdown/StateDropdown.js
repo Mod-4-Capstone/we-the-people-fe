@@ -44,16 +44,20 @@ const StateDropdown = (props) => {
     }
 
     if(repData.currentQuizResult.nra) {
+      repData.setIsLoading(true)
       postReps(completedQuiz, 'state')
       .then(data => {
         repData.setSummaryStats(data.summary_statistics)
         repData.setLegislators(data.politicians.data)
+        repData.setIsLoading(false)
       })
     } else {
       repData.setCurrentQuizResult(emptyQuiz)
+      repData.setIsLoading(true)
       postReps(emptyQuiz, 'state')
       .then(data => {
         repData.setLegislators(data.politicians.data)
+        repData.setIsLoading(false)
       })
     }
     repData.setIsFormSubmitted(true)
