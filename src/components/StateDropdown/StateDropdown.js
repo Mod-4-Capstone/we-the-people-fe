@@ -27,13 +27,36 @@ const StateDropdown = (props) => {
       numbers_usa: "",
       planned_parenthood: "",
     }
-    repData.setCurrentQuizResult(emptyQuiz)
-    postReps(emptyQuiz, 'state')
-    .then(data => {
-      repData.setLegislators(data.politicians.data)
-    })
-  repData.setIsFormSubmitted(true)
-  props.setSelectedState('default')
+    const completedQuiz = {
+      id: Date.now(),
+      age: repData.currentQuizResult.age,
+      state: props.selectedState,
+      aclu: repData.currentQuizResult.aclu,
+      americans_for_prosperity: repData.currentQuizResult.americans_for_prosperity,
+      end_citizens_united: repData.currentQuizResult.end_citizens_united,
+      national_association_of_police: repData.currentQuizResult.national_association_of_police,
+      national_education_association: repData.currentQuizResult.national_education_association,
+      national_parks_conservation: repData.currentQuizResult.national_parks_conservation,
+      norml: repData.currentQuizResult.norml,
+      nra: repData.currentQuizResult.nra,
+      numbers_usa: repData.currentQuizResult.numbers_usa,
+      planned_parenthood: repData.currentQuizResult.planned_parenthood,
+    }
+
+    if(repData.currentQuizResult.nra) {
+      postReps(completedQuiz, 'state')
+      .then(data => {
+        repData.setLegislators(data.politicians.data)
+      })
+    } else {
+      repData.setCurrentQuizResult(emptyQuiz)
+      postReps(emptyQuiz, 'state')
+      .then(data => {
+        repData.setLegislators(data.politicians.data)
+      })
+    }
+    repData.setIsFormSubmitted(true)
+    props.setSelectedState('default')
   }
 
   return (
