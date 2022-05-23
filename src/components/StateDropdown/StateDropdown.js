@@ -46,6 +46,7 @@ const StateDropdown = (props) => {
     if(repData.currentQuizResult.nra) {
       postReps(completedQuiz, 'state')
       .then(data => {
+        repData.setSummaryStats(data.summary_statistics)
         repData.setLegislators(data.politicians.data)
       })
     } else {
