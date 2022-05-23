@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link, Redirect } from "react-router-dom"
+import { Redirect } from "react-router-dom"
 import "./Quiz.css";
 import Statement from "../Statement2/Statement2";
 import { postReps } from '../../apiCalls';
