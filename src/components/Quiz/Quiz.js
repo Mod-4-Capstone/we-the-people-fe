@@ -39,8 +39,7 @@ const Quiz = (props) => {
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
       repData.setIsLoading(false)
-    })
-    .catch(error=> repData.setError(error.message))
+    }).catch(error=> repData.setError(error.message))
     repData.setIsFormSubmitted(true)
   };
 
