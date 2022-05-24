@@ -47,7 +47,7 @@ it('Should allow the user to select an age range, zipcode, and answers to questi
     .get('.statement').eq(9).contains('Candidates for office should have a limit on the amount of money they can spend campaigning.')
 });
 
-it.only('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
+it('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
   cy.get('.age-dropdown').select('18-28')
     .get('.zipcode-input').type(80030)
     .get('.s-disagree').eq(0).check()
@@ -62,5 +62,13 @@ it.only('Should allow the user to submit a fully filled out quiz, and be redirec
     .get('.s-agree').eq(9).check()
     .get('.submit-btn').click()
     .url().should('include', 'results-dashboard')
+    .get('.user-demo').should('be.visible')
+  });
+
+  it.only('Should allow the user to select a state without the quiz and be directed to a page showing that states legislators. ', () => {
+  cy.get('.state-dropdown').select('Colorado')
+    .get('.go-button').click()
+    .url().should('include', 'results-dashboard')
+    .get('.rep-card').should('have.length', 9)
   });
 });
