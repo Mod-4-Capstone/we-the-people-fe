@@ -34,8 +34,9 @@ const Quiz = (props) => {
     }
     repData.setCurrentQuizResult(newQuizResult)
     repData.setIsLoading(true)
-    
+
     postReps(newQuizResult, 'zipcode').then(data => {
+      console.log(data)
       repData.setLegislators(data.politicians.data)
       repData.setSummaryStats(data.summary_statistics)
       repData.setIsLoading(false)
@@ -61,18 +62,18 @@ const Quiz = (props) => {
   return (
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
       <div className="quiz-header-container">
-      <p className="quote">The Constitution provides for proportional representation in the U.S. House of Representatives and the seats in the House are apportioned based on state population according to the constitutionally mandated Census.  — U.S. Constitution, Amendment XIV, section 2</p>  
+      <p className="quote">The Constitution provides for proportional representation in the U.S. House of Representatives and the seats in the House are apportioned based on state population according to the constitutionally mandated Census.  — U.S. Constitution, Amendment XIV, section 2</p>
         <section className="hook-header">
           <div className="gender-hook">
-            <p className="gender">Female</p> 
+            <p className="gender">Female</p>
             <p className="us-population-rep">U.S. Population: 50.8%</p>
             <p className="congress-rep">117th Congress: 27.5%</p>
-          </div>  
+          </div>
           <div className="age-hook">
-            <p className="age">65 or older</p> 
+            <p className="age">65 or older</p>
             <p className="us-population-rep">U.S. Population: 16.5%</p>
             <p className="congress-rep">117th Congress: 40%</p>
-          </div>  
+          </div>
         </section>
       </div>
       <section className="input-tagline">
