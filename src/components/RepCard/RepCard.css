@@ -3,8 +3,8 @@
   flex-direction: column;
   box-sizing: border-box;
   border-radius: 5px;
-  height: 30rem;
-  width: 30rem;
+  height: 35rem;
+  width: 35rem;
   padding-top: 0;
   margin: 2em;
   background-color: #F1FAEE;
@@ -44,17 +44,19 @@
   align-self: center;
 }
 
-.rep-issues-container {
-  border-top: 2px solid #1D3557;
-  margin: 1em 0 1em 0;
-  padding-top: 1em;
-  overflow-y: scroll;
-  padding: 1em;
-
+.rep-contact-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 1em;
 }
 
-.details-arrow {
-  cursor: pointer;
+.mail-icon {
+  font-size: 20px;
+}
+
+.contact-text {
+  color: black;
 }
 
 .reelection-text {
@@ -65,5 +67,4 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
-  margin: 0 0 1em 0;
 }
