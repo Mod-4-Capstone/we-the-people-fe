@@ -1,0 +1,22 @@
+.error-container {
+  height: 73vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+
+.error-icon {
+  font-size: 3em;
+  margin-top: .5em;
+}
+
+.error-container h1 {
+  font-family: 'Khula', sans-serif;
+  margin-top: 1em;
+}
+
+.error-container button {
+  margin-top: 2em;
+}
