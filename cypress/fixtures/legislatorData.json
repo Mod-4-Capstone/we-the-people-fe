@@ -1,0 +1,223 @@
+{
+    "politicians": {
+        "data": [
+            {
+                "id": "83",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 83,
+                        "name": "Michael Bennet",
+                        "congressional_type": "Senator",
+                        "state": "CO",
+                        "age": 58,
+                        "photo": "https://static.votesmart.org/canphoto/110942.jpg",
+                        "gender": "Male",
+                        "district": "CO",
+                        "years_in_office": 13,
+                        "next_election": 2022,
+                        "representative_id": 83,
+                        "party": "Democrat"
+                    },
+                    "rating": {
+                        "id": 83,
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 10,
+                        "aclu": 100,
+                        "end_citizens_united": 100,
+                        "national_education_association": 100,
+                        "national_association_of_police": 80,
+                        "national_parks_conservation": 100,
+                        "nra": 7,
+                        "numbers_usa": 13,
+                        "norml": 92,
+                        "representative_id": 83
+                    },
+                    "representative_social": {
+                        "id": 83,
+                        "website": "http://bennet.senate.gov/",
+                        "contact_page": "https://www.bennet.senate.gov/?p=contact",
+                        "twitter": "https://twitter.com/SenatorBennet",
+                        "representative_id": 83
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 10,
+                        "aclu": 0,
+                        "end_citizens_united": 20,
+                        "national_education_association": 0,
+                        "national_association_of_police": 0,
+                        "national_parks_conservation": 0,
+                        "norml": 0,
+                        "numbers_usa": 13
+                    },
+                    "compatibility": 93.7
+                }
+            },
+            {
+                "id": "87",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 87,
+                        "name": "Diana DeGette",
+                        "congressional_type": "Representative",
+                        "state": "CO",
+                        "age": 65,
+                        "photo": "https://static.votesmart.org/canphoto/561.jpg",
+                        "gender": "Female",
+                        "district": "1",
+                        "years_in_office": 26,
+                        "next_election": 2022,
+                        "representative_id": 87,
+                        "party": "Democrat"
+                    },
+                    "rating": {
+                        "id": 87,
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 8,
+                        "aclu": 100,
+                        "end_citizens_united": 90,
+                        "national_education_association": 100,
+                        "national_association_of_police": 40,
+                        "national_parks_conservation": 100,
+                        "nra": 0,
+                        "numbers_usa": 4,
+                        "norml": 92,
+                        "representative_id": 87
+                    },
+                    "representative_social": {
+                        "id": 87,
+                        "website": "http://degette.house.gov/",
+                        "contact_page": "https://degette.house.gov/contact/e-mail-diana",
+                        "twitter": "http://twitter.com/RepDianaDeGette",
+                        "representative_id": 87
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 12,
+                        "aclu": 0,
+                        "end_citizens_united": 10,
+                        "national_education_association": 0,
+                        "national_association_of_police": 40,
+                        "national_parks_conservation": 0,
+                        "norml": 0,
+                        "numbers_usa": 4
+                    },
+                    "compatibility": 88.5
+                }
+            },
+            {
+                "id": "88",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 88,
+                        "name": "John Hickenlooper",
+                        "congressional_type": "Senator",
+                        "state": "CO",
+                        "age": 70,
+                        "photo": "https://static.votesmart.org/canphoto/71547.jpg",
+                        "gender": "Male",
+                        "district": "CO",
+                        "years_in_office": 2,
+                        "next_election": 2026,
+                        "representative_id": 88,
+                        "party": "Democrat"
+                    },
+                    "rating": {
+                        "id": 88,
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 10,
+                        "aclu": 100,
+                        "end_citizens_united": null,
+                        "national_education_association": 100,
+                        "national_association_of_police": null,
+                        "national_parks_conservation": null,
+                        "nra": 0,
+                        "numbers_usa": 0,
+                        "norml": 92,
+                        "representative_id": 88
+                    },
+                    "representative_social": {
+                        "id": 88,
+                        "website": "https://www.hickenlooper.senate.gov/",
+                        "contact_page": null,
+                        "twitter": "https://twitter.com/SenatorHick?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3ASenatorHick&ref_url=https%3A%2F%2Fwww.hickenlooper.senate.gov%2F",
+                        "representative_id": 88
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 10,
+                        "aclu": 0,
+                        "end_citizens_united": 0,
+                        "national_education_association": 0,
+                        "national_association_of_police": 0,
+                        "national_parks_conservation": 0,
+                        "norml": 0,
+                        "numbers_usa": 0
+                    },
+                    "compatibility": 97.5
+                }
+            }
+        ]
+    },
+    "summary_statistics": {
+        "data": {
+            "id": null,
+            "type": "summary_statistics",
+            "attributes": {
+                "planned_parenthood": {
+                    "average_rating": 100.0,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 0.0
+                },
+                "americans_for_prosperity": {
+                    "average_rating": 9.3,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 10.7
+                },
+                "aclu": {
+                    "average_rating": 100.0,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 0.0
+                },
+                "end_citizens_united": {
+                    "average_rating": 95.0,
+                    "rated_politicians": "2 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 15.0
+                },
+                "national_association_of_police": {
+                    "average_rating": 60.0,
+                    "rated_politicians": "2 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 20.0
+                },
+                "national_education_association": {
+                    "average_rating": 100.0,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 0.0
+                },
+                "national_parks_conservation": {
+                    "average_rating": 100.0,
+                    "rated_politicians": "2 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 0.0
+                },
+                "nra": {
+                    "average_rating": 2.3,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 4.7
+                },
+                "numbers_usa": {
+                    "average_rating": 5.7,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 5.7
+                },
+                "norml": {
+                    "average_rating": 92.0,
+                    "rated_politicians": "3 out of 3 are currently rated by this Special Interest Group",
+                    "user_difference": 0.0
+                }
+            }
+        }
+    }
+}
