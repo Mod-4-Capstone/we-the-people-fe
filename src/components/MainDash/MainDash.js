@@ -4,22 +4,33 @@ import './MainDash.css'
 import QuizResults from "../QuizResults/QuizResults"
 import RepContainer from "../RepContainer/RepContainer"
 import Loader from "../Loader/Loader"
+import Error from "../Error/Error"
 
 const MainDash = () => {
 
   const repData = useContext(DataContext)
 
-  return (
-    <section className="main-dash">
-      {!repData.isLoading ?  
-      <>
+  if (!repData.isLoading && !repData.error) {
+    return (
+      <section className="main-dash">
         {repData.currentQuizResult.nra && <QuizResults />}
         <RepContainer />
-      </> :
-      <Loader/> 
-      }
-    </section>
-    );
+      </section>
+    )
+  } else if (repData.error) {
+    return (
+      <section className="main-dash">
+        <Error msg={repData.error}/>
+      </section>
+    )
+  } else {
+    return (
+      <section className="main-dash">
+        <Loader />
+      </section>
+    )
+  }
+
 }
 
 export default MainDash;
