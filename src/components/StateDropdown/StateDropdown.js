@@ -12,9 +12,9 @@ const StateDropdown = (props) => {
   const repData = useContext(DataContext)
 
   const createStateOptions = () => {
-    return states.map(state => {
+    return states.map((state, i) => {
       return (
-        <option value={state.abbrev}>{state.fullName}</option>
+        <option value={state.abbrev} key={i}>{state.fullName}</option>
       )
     })
   }
