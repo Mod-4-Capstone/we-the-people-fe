@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom"
+import React, {useContext} from 'react';
 import "./RepCard"
 import "./RepCard.css"
 import {FiMail} from 'react-icons/fi'
 import RepRatings from "../RepRatings/RepRatings"
 import defaultImg from '../../assets/senate.png'
+import { DataContext } from "../../contexts/DataContext";
 
 const RepCard = ({repData}) => {
-  console.log(repData)
+  const data = useContext(DataContext)
   return (
     <div className="rep-card">
       <div className="reelection-text">
@@ -19,13 +20,16 @@ const RepCard = ({repData}) => {
             </a>
         </div>
         <div className="bio-text-container">
-          <p className="bio-text">{repData.attributes.biography.congressional_type} {repData.attributes.biography.name}</p>
+          <p className="bio-text rep-name">{repData.attributes.biography.congressional_type} {repData.attributes.biography.name}</p>
           <p className="bio-text">Party: {repData.attributes.biography.party}</p>
           {repData.attributes.biography.congressional_type === 'Representative' ?  <p className="bio-text">District: {repData.attributes.biography.district}</p> :  <p className="bio-text">State: {repData.attributes.biography.district}</p>}
           <p className="bio-text">Age: {repData.attributes.biography.age}</p>
           <p className="bio-text">Gender: {repData.attributes.biography.gender}</p>
           <p className="bio-text">Years in office: {repData.attributes.biography.years_in_office}</p>
-          {repData.attributes.compatibility ? <p className="rep-match">{(repData.attributes.compatibility).toFixed(1)}% match with your beliefs</p> : <p className="rep-match">Compatibility unavailable</p>}
+            {data.currentQuizResult.nra && 
+              (repData.attributes.compatibility ? <p className="rep-match">{(repData.attributes.compatibility).toFixed(1)}% match with your beliefs</p> : <p className="rep-match">Compatibility unavailable</p>)
+            }
+            
         </div>
       </div>
       <div className="rep-contact-container">
