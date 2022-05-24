@@ -3,8 +3,10 @@ import "./RepCard"
 import "./RepCard.css"
 import {FiMail} from 'react-icons/fi'
 import RepRatings from "../RepRatings/RepRatings"
+import defaultImg from '../../assets/senate.png'
 
 const RepCard = ({repData}) => {
+  console.log(repData)
   return (
     <div className="rep-card">
       <div className="reelection-text">
@@ -12,9 +14,9 @@ const RepCard = ({repData}) => {
       </div>
       <div className="bio-info">
         <div>
-          <a href={repData.attributes.representative_social.website}>
-            <img src={repData.attributes.biography.photo} alt="representative" className="rep-img"/>
-          </a>
+            <a href={repData.attributes.representative_social.website}>
+              <img src={repData.attributes.biography.photo ? repData.attributes.biography.photo : defaultImg } alt="representative" className="rep-img"/>
+            </a>
         </div>
         <div className="bio-text-container">
           <p className="bio-text">{repData.attributes.biography.congressional_type} {repData.attributes.biography.name}</p>
