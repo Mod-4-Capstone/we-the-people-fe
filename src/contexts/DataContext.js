@@ -8,6 +8,7 @@ const DataContextProvider = ({ children }) => {
   const [currentQuizResult, setCurrentQuizResult] = useState({});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   return (
     <DataContext.Provider
@@ -22,6 +23,8 @@ const DataContextProvider = ({ children }) => {
         setIsFormSubmitted,
         isLoading,
         setIsLoading,
+        error,
+        setError
       }}
     >
       {legislators && children}
