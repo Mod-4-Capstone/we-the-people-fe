@@ -88,9 +88,10 @@ const StateDropdown = (props) => {
             <option value ='default' disabled>select state</option>
             {createStateOptions()}
           </select>
-            <button className='go-button'>Go!</button>
+            <button className='go-button' disabled={!props.selectedState}>Go!</button>
             {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
         </form>
+        {!props.selectedState && <p>Please select a state to continue</p>}
       </div>
     );
 }

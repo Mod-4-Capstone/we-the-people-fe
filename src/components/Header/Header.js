@@ -8,12 +8,13 @@ import { DataContext } from '../../contexts/DataContext'
 const Header = () => {
   const repData = useContext(DataContext)
   const location = useLocation()
-  const [selectedState, setSelectedState] = useState('')
+  const [selectedState, setSelectedState] = useState("")
 
   const resetFormsForHome = () => {
     repData.setIsFormSubmitted(false);
     repData.setCurrentQuizResult({})
     repData.setError('')
+    setSelectedState("")
   }
 
   return (

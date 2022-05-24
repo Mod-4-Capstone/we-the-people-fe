@@ -19,6 +19,7 @@
   border: none;
   align-self: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .go-button {
