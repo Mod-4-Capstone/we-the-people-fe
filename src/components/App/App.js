@@ -9,8 +9,6 @@ import { DataContextProvider } from '../../contexts/DataContext'
 
 
 const App = () => {
-  const [legislators, setLegislators] = useState([])
-  const [quizResult, setQuizResult] = useState({})
 
   return (
     <div className="App">
@@ -21,7 +19,7 @@ const App = () => {
             render={() =>{
               return (
               <>
-                <Quiz setQuizResult={setQuizResult}/>
+                <Quiz />
               </>
           )}}
           />

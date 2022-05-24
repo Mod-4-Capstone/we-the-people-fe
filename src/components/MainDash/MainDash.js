@@ -3,6 +3,7 @@ import { DataContext } from '../../contexts/DataContext'
 import './MainDash.css'
 import QuizResults from "../QuizResults/QuizResults"
 import RepContainer from "../RepContainer/RepContainer"
+import Loader from "../Loader/Loader"
 
 const MainDash = () => {
 
@@ -10,8 +11,13 @@ const MainDash = () => {
 
   return (
     <section className="main-dash">
-    {repData.currentQuizResult.planned_parenthood && <QuizResults />}
-    <RepContainer />
+      {!repData.isLoading ?  
+      <>
+        {repData.currentQuizResult.nra && <QuizResults />}
+        <RepContainer />
+      </> :
+      <Loader/> 
+      }
     </section>
     );
 }

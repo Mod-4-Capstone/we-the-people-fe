@@ -33,3 +33,9 @@
   justify-content: space-around;
   width: 100%;
 }
+
+@media screen and (max-width: 700px) {
+  .state-dropdown-container {
+    padding: 0.5rem;
+  }
+}

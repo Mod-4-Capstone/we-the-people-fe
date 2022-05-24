@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 import './Header.css'
 import StateDropdown from "../StateDropdown/StateDropdown"
-import { Link, Redirect, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { FaFlagUsa } from 'react-icons/fa'
 import { DataContext } from '../../contexts/DataContext'
 
@@ -10,9 +10,9 @@ const Header = () => {
   const location = useLocation()
   const [selectedState, setSelectedState] = useState('')
 
-  const resetSelectedState = () => {
+  const resetFormsForHome = () => {
     repData.setIsFormSubmitted(false);
-    // return !repData.isFormSubmitted ? setSelectedState('default') : console.log('NOT WORKING');
+    repData.setCurrentQuizResult({})
 
   }
 
@@ -27,7 +27,7 @@ const Header = () => {
 
         {location.pathname === "/results-dashboard" &&
           <Link to="/">
-            <button className="home-btn" onClick={() => resetSelectedState()}>Home</button>
+            <button className="home-btn" onClick={() => resetFormsForHome()}>Start Over</button>
           </Link>}
     </section>
   )

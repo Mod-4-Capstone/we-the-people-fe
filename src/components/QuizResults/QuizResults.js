@@ -35,7 +35,7 @@ const QuizResults = () => {
         <p>You are {repData.currentQuizResult.end_citizens_united}% in support of campaign spending limits.</p>
       </section>
       <section className="state-wide-comparison">
-        {repData.summaryStats.data && <h2>Your beliefs match {getStateAverageStats()}% with your state reps</h2>}
+        {repData.summaryStats.data && <h2>Your beliefs match {getStateAverageStats()}% with {repData.legislators[0].attributes.biography.state} representatives</h2>}
       </section>
     </section>
    );
