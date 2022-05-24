@@ -5,14 +5,11 @@ import { Link } from "react-router-dom"
 
 
 
-const Error = () => {
+const Error = ({msg}) => {
   return (  
     <section className='error-container'>
       <BiMessageAltError className='error-icon'/>
       <h1>Whoops! Something went wrong.</h1>
-      <Link to='/'>
-        <button className='home-btn'>Back to Main</button>
-      </Link>
     </section>
   );
 }
