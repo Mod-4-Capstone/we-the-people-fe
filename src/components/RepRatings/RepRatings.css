@@ -8,4 +8,9 @@
 
 .details-arrow {
   cursor: pointer;
+  margin-left: 1em;
+}
+
+.no-rating-text {
+  margin-left: 1em;
 }
