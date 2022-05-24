@@ -5,6 +5,7 @@ import Layout from '../Layout/Layout'
 import Quiz from '../Quiz/Quiz'
 import MainDash from '../MainDash/MainDash';
 import { DataContextProvider } from '../../contexts/DataContext'
+import Error from '../Error/Error';
 
 
 
@@ -16,16 +17,17 @@ const App = () => {
       <Layout>
         <Switch>
           <Route exact path="/"
-            render={() =>{
-              return (
-              <>
-                <Quiz />
-              </>
-          )}}
+            render={() => <Quiz /> }
           />
-            <Route exact path="/results-dashboard"
-              render={() => <MainDash/> }>
-            </Route>
+          
+          <Route exact path="/results-dashboard"
+            render={() => <MainDash/> }>
+          </Route>
+
+          <Route>
+            <Error />
+          </Route>
+
         </Switch>
 
       </Layout>
