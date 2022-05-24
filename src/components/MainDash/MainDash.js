@@ -10,6 +10,23 @@ const MainDash = () => {
 
   const repData = useContext(DataContext)
 
+  // return (
+  //   <section className="main-dash">
+  //      {!repData.isLoading ?  
+  //     <>
+  //       {repData.currentQuizResult.nra && <QuizResults />}
+  //       <RepContainer />
+  //     </> :
+  //     <Loader/> 
+  //     }
+  //   </section>
+  //   );
+
+  {/* // if there's an error -> render Error component
+  // if there's no error & !repData.isLoading then render Quiz results conditional & RepContainer
+  // if there's no error & repData.isLoading, then render Loader */}
+
+
   if (!repData.isLoading && !repData.error) {
     return (
       <section className="main-dash">
