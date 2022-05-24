@@ -40,8 +40,7 @@ const Quiz = (props) => {
       repData.setSummaryStats(data.summary_statistics)
       repData.setIsLoading(false)
     })
-    .catch(error=>console.warn(error))
-
+    .catch(error=> repData.setError(error.message))
     repData.setIsFormSubmitted(true)
   };
 
