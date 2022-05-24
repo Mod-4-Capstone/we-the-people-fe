@@ -32,7 +32,7 @@ describe('Landing Page', () => {
     .get('option').should('have.length', 59)
   });
 
-it.only('Should allow the user to select an age range, zipcode, and answers to questions', () => {
+it('Should allow the user to select an age range, zipcode, and answers to questions', () => {
   cy.get('.age-dropdown').select('18-28')
     .get('.zipcode-input').type(80030)
     .get('.statement').eq(0).contains('Abortion should be legalized at the federal level.')
@@ -47,7 +47,20 @@ it.only('Should allow the user to select an age range, zipcode, and answers to q
     .get('.statement').eq(9).contains('Candidates for office should have a limit on the amount of money they can spend campaigning.')
 });
 
-it('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
-});
-
+it.only('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
+  cy.get('.age-dropdown').select('18-28')
+    .get('.zipcode-input').type(80030)
+    .get('.s-disagree').eq(0).check()
+    .get('.disagree').eq(1).check()
+    .get('.neutral').eq(2).check()
+    .get('.agree').eq(3).check()
+    .get('.s-agree').eq(4).check()
+    .get('.s-disagree').eq(5).check()
+    .get('.disagree').eq(6).check()
+    .get('.neutral').eq(7).check()
+    .get('.agree').eq(8).check()
+    .get('.s-agree').eq(9).check()
+    .get('.submit-btn').click()
+    .url().should('include', 'results-dashboard')
+  });
 });
