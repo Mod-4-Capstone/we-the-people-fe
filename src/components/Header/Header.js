@@ -13,7 +13,7 @@ const Header = () => {
   const resetFormsForHome = () => {
     repData.setIsFormSubmitted(false);
     repData.setCurrentQuizResult({})
-
+    repData.setError('')
   }
 
   return (

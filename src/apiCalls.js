@@ -5,7 +5,13 @@ const postReps = (newQuizResult, type) => {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then(response => response.json())
+  }).then(response => {
+    if (!response.ok) {
+      throw new Error('Error fetching data. Please try again later')
+    } else {
+      return response.json()
+    }
+  })
 }
 
 export { postReps }

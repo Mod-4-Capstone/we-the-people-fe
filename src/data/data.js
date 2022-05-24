@@ -1,133 +1,53 @@
- const legislatorsData = [
-  {
-    bio: {
-      name: 'Diana DeGette',
-      state: 'CO',
-      age: 64,
-      affiliated_party: 'Democrat',
-      district: 1,
-      picture: 'https://theunitedstates.io/images/congress/450x550/D000197.jpg',
-      gender: 'Female',
-      years_in_office: 25,
-      next_reelection_yr: '2022'
-    },
-    ratings: {
-      planned_parenthood: 100,
-      americans_for_prosperity: 8,
-      aclu: 100,
-      end_citizens_united: 90,
-      national_assoc_of_police_org: 40,
-      national_education_assoc: 100,
-      national_parks_conservation_assoc: 100,
-      national_rifle_assoc: 0,
-      numbers_usa: 4,
-      national_cannabis_industry_assoc: 100
-    }
-  },
-
-  {
-    bio: {
-      name: 'John Hickenlooper',
-      state: 'CO',
-      age: 70,
-      affiliated_party: 'Democrat',
-      district: null,
-      picture: 'https://theunitedstates.io/images/congress/450x550/H000273.jpg',
-      gender: 'Male',
-      years_in_office: 1,
-      next_reelection_yr: '2027'
-    },
-    ratings: {
-      planned_parenthood: 100,
-      americans_for_prosperity: 10,
-      aclu: 100,
-      end_citizens_united: 90,
-      national_assoc_of_police_org: 40,
-      national_education_assoc: 100,
-      national_parks_conservation_assoc: 100,
-      national_rifle_assoc: 0,
-      numbers_usa: 0,
-      national_cannabis_industry_assoc: 100
-    }
-  },
-
-  {
-    bio: {
-      name: 'Michael Bennet',
-      state: 'CO',
-      age: 57,
-      affiliated_party: 'Democrat',
-      district: null,
-      picture: 'https://theunitedstates.io/images/congress/450x550/B001267.jpg',
-      gender: 'Male',
-      years_in_office: 13,
-      next_reelection_yr: '2022'
-    },
-    ratings: {
-      planned_parenthood: 100,
-      americans_for_prosperity: 19,
-      aclu: 100,
-      end_citizens_united: 100,
-      national_assoc_of_police_org: 80,
-      national_education_assoc: 100,
-      national_parks_conservation_assoc: 100,
-      national_rifle_assoc: 7,
-      numbers_usa: 13,
-      national_cannabis_industry_assoc: 100
-    }
-  },
-
-  {
-    bio: {
-      name: 'Lisa Murkowski',
-      state: 'AK',
-      age: 64,
-      affilited_party: 'Republican',
-      district: null,
-      picture: 'https://theunitedstates.io/images/congress/450x550/M001153.jpg',
-      gender: 'Female',
-      years_in_office: 20,
-      next_reelection_yr: '2022'
-    },
-    ratings: {
-      planned_parenthood: 33,
-      americans_for_prosperity: 79,
-      aclu: 100,
-      end_citizens_united: 0,
-      national_assoc_of_police_org: 80,
-      national_education_assoc: 75,
-      national_parks_conservation_assoc: 0,
-      national_rifle_assoc: 93,
-      numbers_usa: 30,
-      national_cannabis_industry_assoc: 67
-    }
-  },
-
-  {
-    bio: {
-      name: 'Dan Sullivan',
-      state: 'AK',
-      age: 57,
-      affilited_party: 'Republican',
-      district: null,
-      picture: 'https://theunitedstates.io/images/congress/450x550/S001198.jpg',
-      gender: 'Male',
-      years_in_office: 7,
-      next_reelection_yr: '2027'
-    },
-    ratings: {
-      planned_parenthood: 0,
-      americans_for_prosperity: 81,
-      aclu: 75,
-      end_citizens_united: 0,
-      national_assoc_of_police_org: 80,
-      national_education_assoc: 0,
-      national_parks_conservation_assoc: 0,
-      national_rifle_assoc: 100,
-      numbers_usa: 73,
-      national_cannabis_industry_assoc: 67
-    }
-  }
+const states = [
+  {fullName: 'Alaska', abbrev: 'AK'},
+  {fullName: 'Arizona', abbrev: 'AZ'},
+  {fullName: 'Arkansas', abbrev: 'AR'},
+  {fullName: 'California', abbrev: 'CA'},
+  {fullName: 'Colorado', abbrev: 'CO'},
+  {fullName: 'Connecticut', abbrev: 'CT'},
+  {fullName: 'Delaware', abbrev: 'DE'},
+  {fullName: 'Florida', abbrev: 'FL'},
+  {fullName: 'Georgia', abbrev: 'GA'},
+  {fullName: 'Hawaii', abbrev: 'HI'},
+  {fullName: 'Idaho', abbrev: 'ID'},
+  {fullName: 'Illinois', abbrev: 'IL'},
+  {fullName: 'Indiana', abbrev: 'IN'},
+  {fullName: 'Iowa', abbrev: 'IA'},
+  {fullName: 'Kansas', abbrev: 'KS'},
+  {fullName: 'Kentucky', abbrev: 'KY'},
+  {fullName: 'Louisiana', abbrev: 'LA'},
+  {fullName: 'Maine', abbrev: 'ME'},
+  {fullName: 'Maryland', abbrev: 'MD'},
+  {fullName: 'Massachusetts', abbrev: 'MA'},
+  {fullName: 'Michigan', abbrev: 'MI'},
+  {fullName: 'Minnesota', abbrev: 'MN'},
+  {fullName: 'Mississippi', abbrev: 'MS'},
+  {fullName: 'Missouri', abbrev: 'MO'},
+  {fullName: 'Montana', abbrev: 'MT'},
+  {fullName: 'Nebraska', abbrev: 'NE'},
+  {fullName: 'Nevada', abbrev: 'NV'},
+  {fullName: 'New Hampshire', abbrev: 'NH'},
+  {fullName: 'New Jersey', abbrev: 'NJ'},
+  {fullName: 'New Mexico', abbrev: 'NM'},
+  {fullName: 'New York', abbrev: 'NY'},
+  {fullName: 'North Carolina', abbrev: 'NC'},
+  {fullName: 'North Dakota', abbrev: 'ND'},
+  {fullName: 'Ohio', abbrev: 'OH'},
+  {fullName: 'Oklahoma', abbrev: 'OK'},
+  {fullName: 'Oregon', abbrev: 'OR'},
+  {fullName: 'Pennsylvania', abbrev: 'PA'},
+  {fullName: 'Rhode Island', abbrev: 'RI'},
+  {fullName: 'South Carolina', abbrev: 'SC'},
+  {fullName: 'South Dakota', abbrev: 'SD'},
+  {fullName: 'Tennessee', abbrev: 'TN'},
+  {fullName: 'Texas', abbrev: 'TX'},
+  {fullName: 'Utah', abbrev: 'UT'},
+  {fullName: 'Vermont', abbrev: 'VT'},
+  {fullName: 'Virginia', abbrev: 'VA'},
+  {fullName: 'Washington', abbrev: 'WA'},
+  {fullName: 'West Virginia', abbrev: 'WV'},
+  {fullName: 'Wisconsin', abbrev: 'WI'},
+  {fullName: 'Wyoming', abbrev: 'WY'}
 ]
 
-export default legislatorsData;
+export default states

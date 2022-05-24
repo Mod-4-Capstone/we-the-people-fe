@@ -1,0 +1,18 @@
+.rep-issues-container {
+  border-top: 2px solid #1D3557;
+  margin: 1em 0 1em 0;
+  padding-top: 1em;
+  overflow-y: scroll;
+  padding: 1em;
+}
+
+.details-arrow {
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+.no-rating-text {
+  margin-left: 1em;
+  color: #E63946;
+
+}
