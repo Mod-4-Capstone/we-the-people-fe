@@ -45,6 +45,21 @@ const Quiz = (props) => {
     repData.setIsFormSubmitted(true)
   };
 
+  const handleZipcode = (e) => {
+    let key = e.which ? e.which : e.keyCode;
+    if (
+      (e.target.value.length >= 5 &&
+        key !== 8 &&
+        key !== 37 &&
+        key !== 38 &&
+        key !== 39 &&
+        key !== 40) ||
+      (key === 18 || key === 189 || key === 229)
+    ) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <form className="quiz" onSubmit={(e) => submitForm(e)}>
       <div className="quiz-header-container">
@@ -94,6 +109,7 @@ const Quiz = (props) => {
           max="99950"
           value={formFields.zipcode}
           onChange={(e) => handleChange(e)}
+          onKeyDown={e => handleZipcode(e)}
         ></input>
       </div>
         <Statement
