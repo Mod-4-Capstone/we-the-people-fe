@@ -30,7 +30,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">Planned Parenthood has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">Planned Parenthood has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
       {repData.attributes.rating.americans_for_prosperity !== null ?
@@ -56,7 +56,7 @@ const RepRatings = ({ repData }) => {
             )}
         </details>
         :
-        <p className="no-rating-text">Americans for Prosperity has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">Americans for Prosperity has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
       {repData.attributes.rating.aclu !== null ? 
@@ -80,7 +80,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">The ACLU has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">The ACLU has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
 
@@ -107,7 +107,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         : 
-        <p className="no-rating-text">End Citizens United has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">End Citizens United has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
       {repData.attributes.rating.national_association_of_police !== null ? 
@@ -137,7 +137,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">National Assoc. of Police Org has not given this{repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">National Assoc. of Police Org has not given this{repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
       {repData.attributes.rating.national_parks_conservation !== null ?
@@ -164,7 +164,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">National Parks Conservation Assoc. has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">National Parks Conservation Assoc. has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
       {repData.attributes.rating.nra !== null ? 
@@ -188,7 +188,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">The NRA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">The NRA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
       
       {repData.attributes.rating.numbers_usa !== null ?
@@ -213,7 +213,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">NumbersUSA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">NumbersUSA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
       {repData.attributes.rating.norml !== null ?
@@ -238,7 +238,7 @@ const RepRatings = ({ repData }) => {
           )}
         </details>
         :
-        <p className="no-rating-text">Norml has not given this {repData.attributes.biography.congressional_type} a rating yet.</p>
+        <em><p className="no-rating-text">Norml has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
     </section>
   );
