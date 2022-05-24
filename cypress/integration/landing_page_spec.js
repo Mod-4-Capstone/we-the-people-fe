@@ -51,30 +51,49 @@ it('Should allow the user to select an age range, zipcode, and answers to questi
     .get('.statement').eq(7).contains('The police should not be defunded.')
     .get('.statement').eq(8).contains('Marijuana should be federally legalized.')
     .get('.statement').eq(9).contains('Candidates for office should have a limit on the amount of money they can spend campaigning.')
-});
+  });
+})
+
+describe('Quiz with zipcode user flow', () => {
+
+  beforeEach(() => {
+    cy.fixture('legislatorData.json')
+      .then((legislatorData) => {cy.intercept('POST', 'https://we-the-people-be.herokuapp.com/api/v2/zipcode_with_quiz', {
+        statusCode: 200,
+        body: legislatorData
+      })
+    })
+     .visit('http://localhost:3000/')
+      .get('.age-dropdown').select('18-28')
+       .get('.zipcode-input').type(80030)
+       .get('.s-disagree').eq(0).check()
+       .get('.disagree').eq(1).check()
+       .get('.neutral').eq(2).check()
+       .get('.agree').eq(3).check()
+       .get('.s-agree').eq(4).check()
+       .get('.s-disagree').eq(5).check()
+       .get('.disagree').eq(6).check()
+       .get('.neutral').eq(7).check()
+       .get('.agree').eq(8).check()
+       .get('.s-agree').eq(9).check()
+       .get('.submit-btn').click()
+  })
+
+
 
 it.only('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
-  cy.get('.age-dropdown').select('18-28')
-    .get('.zipcode-input').type(80030)
-    .get('.s-disagree').eq(0).check()
-    .get('.disagree').eq(1).check()
-    .get('.neutral').eq(2).check()
-    .get('.agree').eq(3).check()
-    .get('.s-agree').eq(4).check()
-    .get('.s-disagree').eq(5).check()
-    .get('.disagree').eq(6).check()
-    .get('.neutral').eq(7).check()
-    .get('.agree').eq(8).check()
-    .get('.s-agree').eq(9).check()
-    .get('.submit-btn').click()
-    .url().should('include', 'results-dashboard')
-    // .get('.user-demo').should('be.visible')
+    cy.url().should('include', 'results-dashboard')
+    .get('.user-demo').should('be.visible')
   });
 
+  it('Should show a quiz results summary after the user has taken a quiz', () => {
+    cy.url().should('include', 'results-dashboard')
+      .get('.user-demo').should('be.visible')
+      .get()
+    });
+
   it('Should allow the user to select a state without the quiz and be directed to a page showing that states legislators. ', () => {
-  cy.get('.state-dropdown').select('Colorado')
-    .get('.go-button').click()
-    .url().should('include', 'results-dashboard')
+  cy.url().should('include', 'results-dashboard')
     .get('.rep-card').should('have.length', 9)
   });
 });
