@@ -1,24 +1,12 @@
 describe('Landing Page', () => {
 
   beforeEach(() => {
-    cy.intercept( 'POST', `https://we-the-people-be.herokuapp.com/api/v2/zipcode_with_quiz`, {
-          statusCode: 201,
-          body: {
-            id: Date.now,
-            age: "18-28",
-            zipcode: "80030",
-            aclu: "25",
-            americans_for_prosperity: "100",
-            end_citizens_united: "100",
-            national_association_of_police: "50",
-            national_education_association: "25",
-            national_parks_conservation: "75",
-            norml: "75",
-            nra: "50",
-            numbers_usa: "0",
-            planned_parenthood: "0",
-          },
-        })
+    cy.fixture('legislatorData.json')
+      .then((legislatorData) => {cy.intercept('POST', 'https://we-the-people-be.herokuapp.com/api/v2/zipcode_with_quiz', {
+        statusCode: 200,
+        body: legislatorData
+      })
+    })
      .visit('http://localhost:3000/')
   })
 
