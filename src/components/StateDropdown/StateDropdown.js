@@ -10,8 +10,7 @@ const StateDropdown = (props) => {
 
   const repData = useContext(DataContext)
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const packageEmptyQuiz = () => {
     const emptyQuiz = {
       id: Date.now(),
       age: "",
@@ -27,6 +26,10 @@ const StateDropdown = (props) => {
       numbers_usa: "",
       planned_parenthood: "",
     }
+    return emptyQuiz
+  }
+
+  const packageCompletedQuiz = () => {
     const completedQuiz = {
       id: Date.now(),
       age: repData.currentQuizResult.age,
@@ -42,23 +45,27 @@ const StateDropdown = (props) => {
       numbers_usa: repData.currentQuizResult.numbers_usa,
       planned_parenthood: repData.currentQuizResult.planned_parenthood,
     }
+    return completedQuiz
+  }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if(repData.currentQuizResult.nra) {
       repData.setIsLoading(true)
-      postReps(completedQuiz, 'state')
+      postReps(packageCompletedQuiz(), 'state')
       .then(data => {
         repData.setSummaryStats(data.summary_statistics)
         repData.setLegislators(data.politicians.data)
         repData.setIsLoading(false)
-      })
+      }).catch(error=> repData.setError(error.message))
     } else {
-      repData.setCurrentQuizResult(emptyQuiz)
+      repData.setCurrentQuizResult(packageEmptyQuiz())
       repData.setIsLoading(true)
-      postReps(emptyQuiz, 'state')
+      postReps(packageEmptyQuiz(), 'state')
       .then(data => {
         repData.setLegislators(data.politicians.data)
         repData.setIsLoading(false)
-      })
+      }).catch(error=> repData.setError(error.message))
     }
     repData.setIsFormSubmitted(true)
     props.setSelectedState('default')
