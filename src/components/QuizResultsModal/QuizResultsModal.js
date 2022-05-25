@@ -10,7 +10,7 @@ const QuizResultsModal = () => {
 
   return (  
     <Popup
-      trigger={<button className="button"> See more results! </button>}
+      trigger={<button className="modal-button"> See more results! </button>}
       modal
       nested
     >
@@ -30,7 +30,6 @@ const QuizResultsModal = () => {
             <p className='modal-tiles five'>You are {repData.currentQuizResult.norml}% in support of the federal government legalizing marijuana.</p>
             <p className='modal-tiles six'>You are {repData.currentQuizResult.national_association_of_police}% in support of funding the police.</p>
             <p className='modal-tiles seven'>You are {repData.currentQuizResult.end_citizens_united}% in support of campaign spending limits.</p>
-
           </div>
         </div>
       )}
