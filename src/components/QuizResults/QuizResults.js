@@ -45,10 +45,10 @@ const QuizResults = () => {
         <QuizResultsModal />
       </section>
       <section className="state-wide-comparison">
-        {repData.summaryStats.data && 
+        {repData.summaryStats.data &&
         <>
         <p className="state-percentage-text">Your beliefs match</p>
-        <p className="state-percentage">{getStateAverageStats()}%</p> 
+        <p className="state-percentage">{getStateAverageStats()}%</p>
         <p className="state-percentage-text">with {repData.legislators[0].attributes.biography.state} legislators</p>
         <p className="state-percentage-text">overall</p>
         </>

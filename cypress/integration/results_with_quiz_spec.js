@@ -31,7 +31,7 @@ describe('Landing Page', () => {
     .get('.zipcode-input').should('be.visible')
     .get('.statement').should('have.length', 10)
     .get('.state-form-container').should('be.visible')
-    .get('option').should('have.length', 59)
+    .get('.state-dropdown > option').should('have.length', 50)
   });
 
 it('Should allow the user to select an age range, zipcode, and answers to questions', () => {
@@ -80,17 +80,21 @@ describe('Quiz with zipcode user flow', () => {
     .get('.user-demo').should('be.visible')
   });
 
-  it.only('Should show a quiz results summary after the user has taken a quiz', () => {
+  it('Should show a quiz results summary after the user has taken a quiz', () => {
     cy.url().should('include', 'results-dashboard')
-      .get('.user-demo').should('be.visible')
-      .get('.user-quiz-results > p').should('have.length', 10)
-      .get('.user-quiz-results > p').first().contains('You are 0% in support of legalizing abortion federally.')
-      .get('.user-quiz-results > p').last().contains('You are 100% in support of campaign spending limits.')
-
+      .get('.user-demo > h2').should('be.visible').contains(`What's important to you:`)
+      .get('.result-tile > p').eq(1).contains('in support of legalizing abortion federally')
+      .get('.result-summary').eq(1).contains('in support of better funding for public schools.')
+      .get('.result-summary').eq(2).contains('in support of having less firearm purchase restrictions.')
+      .get('.percentage').eq(1).contains('25%')
+      .get('.percentage').eq(2).contains('50%')
     });
 
-  it('Should allow the user to select a state without the quiz and be directed to a page showing that states legislators. ', () => {
+  it.only('Should show all of the legislators associated with the zipcode provided on the quiz', () => {
   cy.url().should('include', 'results-dashboard')
     .get('.rep-card').should('have.length', 3)
+    .get('.rep-name').first().contains('Senator John Hickenlooper')
+    .get('.rep-name').last().contains('Representative Diana DeGette')
   });
+
 });
