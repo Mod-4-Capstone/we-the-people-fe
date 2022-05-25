@@ -32,10 +32,16 @@
   font-family: 'Khula', sans-serif;
   padding: 0.5em 0.7em;
   float: right;
+  cursor: pointer;
 }
 
 h1 {
   font-family: 'IM Fell Great Primer', serif;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 700px) {

@@ -23,13 +23,13 @@ const Header = () => {
         <FaFlagUsa />
         <h1 className="title">We The People</h1>
       </div>
-
-      <StateDropdown setSelectedState={setSelectedState} selectedState={selectedState} />
-
+      <div className="header-controls">
+        <StateDropdown setSelectedState={setSelectedState} selectedState={selectedState} />
         {location.pathname === "/results-dashboard" &&
           <Link to="/">
             <button className="home-btn" onClick={() => resetFormsForHome()}>Start Over</button>
           </Link>}
+      </div>
     </section>
   )
 }
