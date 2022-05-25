@@ -6,10 +6,11 @@ const RepRatings = ({ repData }) => {
   const data = useContext(DataContext);
   return (
     <section className="rep-issues-container">
-      
-      {repData.attributes.rating.planned_parenthood !== null ? 
+
+      {repData.attributes.rating.planned_parenthood !== null ?
         <details className="details-arrow">
           <summary
+          className ='abortion-text'
             style={
               !data.currentQuizResult.planned_parenthood
                 ? { listStyle: "square", cursor: "default" }
@@ -20,7 +21,7 @@ const RepRatings = ({ repData }) => {
             {repData.attributes.rating.planned_parenthood}% on Abortion
           </summary>
           {data.currentQuizResult.nra && (
-            <p className="rep-issues">
+            <p className="rep-issues abortion-match">
               You match{" "}
               {100 - repData.attributes.user_comparison.planned_parenthood}% with{" "}
               {repData.attributes.biography.congressional_type}{" "}
@@ -59,7 +60,7 @@ const RepRatings = ({ repData }) => {
         <em><p className="no-rating-text">Americans for Prosperity has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
-      {repData.attributes.rating.aclu !== null ? 
+      {repData.attributes.rating.aclu !== null ?
         <details className="details-arrow">
           <summary
             style={
@@ -84,7 +85,7 @@ const RepRatings = ({ repData }) => {
       }
 
 
-      {repData.attributes.rating.end_citizens_united !== null ? 
+      {repData.attributes.rating.end_citizens_united !== null ?
         <details className="details-arrow">
           <summary
             style={
@@ -106,11 +107,11 @@ const RepRatings = ({ repData }) => {
             </p>
           )}
         </details>
-        : 
+        :
         <em><p className="no-rating-text">End Citizens United has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
-      {repData.attributes.rating.national_association_of_police !== null ? 
+      {repData.attributes.rating.national_association_of_police !== null ?
         <details className="details-arrow">
           <summary
             style={
@@ -167,7 +168,7 @@ const RepRatings = ({ repData }) => {
         <em><p className="no-rating-text">National Parks Conservation Assoc. has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
 
-      {repData.attributes.rating.nra !== null ? 
+      {repData.attributes.rating.nra !== null ?
         <details className="details-arrow">
           <summary
             style={
@@ -190,7 +191,7 @@ const RepRatings = ({ repData }) => {
         :
         <em><p className="no-rating-text">The NRA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
       }
-      
+
       {repData.attributes.rating.numbers_usa !== null ?
         <details className="details-arrow">
           <summary
@@ -219,6 +220,7 @@ const RepRatings = ({ repData }) => {
       {repData.attributes.rating.norml !== null ?
         <details className="details-arrow">
           <summary
+          className='mj-text'
             style={
               !data.currentQuizResult.nra
                 ? { listStyle: "square", cursor: "default" }
@@ -229,7 +231,7 @@ const RepRatings = ({ repData }) => {
             Marijuana
           </summary>
           {data.currentQuizResult.nra && (
-            <p className="rep-issues">
+            <p className="rep-issues mj-match">
               You match {100 - repData.attributes.rating.norml}% with{" "}
               {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}

@@ -97,7 +97,7 @@ describe('Quiz with zipcode user flow', () => {
     .get('.rep-name').last().contains('Representative Diana DeGette')
   });
 
-  it.only('Should allow the user to see all of the bio info, ratings, and percent match for each legislator', () => {
+  it('Should allow the user to see the bio info and match percentage for a legislator', () => {
   cy.url().should('include', 'results-dashboard')
     .get('.rep-name').first().contains('Senator John Hickenlooper')
     .get('.bio-party').first().contains('Party: Democrat')
@@ -106,6 +106,16 @@ describe('Quiz with zipcode user flow', () => {
     .get('.bio-term').first().contains('Years in office: 2')
     .get('.rep-match').first().contains('97.5% match with your beliefs')
 
+  });
+
+  it.only('Should allow the user to see all of the special interest group ratings and their match percentage per issue for each legislator', () => {
+  cy.url().should('include', 'results-dashboard')
+    .get('.rep-name').first().contains('Senator John Hickenlooper')
+    .get('.bio-party').first().contains('Party: Democrat')
+    .get('.abortion-text').first().contains('Planned Parenthood rates this legislator at 100% on Abortion')
+    .get('.abortion-match').first().contains('You match 100% with Senator Hickenlooper on this issue')
+    .get('.mj-text').first().contains('Norml rates this legislator at 92% on Marijuana')
+    .get('.mj-match').first().contains('You match 8% with Senator Hickenlooper on this issue')
   });
 
 });
