@@ -74,7 +74,7 @@ select, input, button, .quote, .input-tagline, .gender-hook, .age-hook {
   width: 13em;
   height: 2.4em;
   border-radius: 50px;
-  border: 2px solid #1D3557;
+  border: 1px solid #1D3557;
   text-align: center;
   cursor: pointer;
 }
