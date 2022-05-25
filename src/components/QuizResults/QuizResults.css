@@ -63,3 +63,10 @@
 .state-percentage-text {
   font-size: 25px;
 }
+
+@media screen and (max-width: 700px) {
+  .user-quiz-results, .quiz-results-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
