@@ -1,6 +1,6 @@
 
 # We the People
-## See the app, deployed on Surge/Heroku [here](url).
+## See the app, deployed on Surge [here](https://wethepeople.surge.sh/).
 
 
 +CD Badge  ![CI Badge](https://github.com/Mod-4-Capstone/we-the-people-fe/actions/workflows/main.yml/badge.svg)
@@ -42,7 +42,7 @@ We recognize that the 117th Congress of the United States is [more diverse](http
 This site was built using this [wireframe](https://excalidraw.com/#room=4cf813c075fa07f1f8b0,0TMMUQkLfs2zU2xTwAmx4Q) as guidance.
 
 ## Deployment
-You can see the site deployed [here]().
+You can see the site deployed on [surge](https://wethepeople.surge.sh/).
 
 You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_the_people_be) to see endpoints, JSON contract, etc or access the [deployed backend](https://we-the-people-be.herokuapp.com/).
 
