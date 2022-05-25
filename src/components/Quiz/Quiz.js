@@ -37,7 +37,6 @@ const Quiz = (props) => {
 
     postReps(newQuizResult, "zipcode")
       .then((data) => {
-        console.log(data);
         repData.setLegislators(data.politicians.data);
         repData.setSummaryStats(data.summary_statistics);
         repData.setIsLoading(false);
