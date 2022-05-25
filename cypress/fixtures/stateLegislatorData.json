@@ -1,0 +1,382 @@
+{
+    "politicians": {
+        "data": [
+            {
+                "id": "186",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 187,
+                        "name": "Cynthia Axne",
+                        "congressional_type": "Representative",
+                        "state": "IA",
+                        "age": 57,
+                        "photo": "https://static.votesmart.org/canphoto/179226.jpg",
+                        "gender": "Female",
+                        "district": "3",
+                        "years_in_office": 4,
+                        "next_election": 2022,
+                        "representative_id": 186,
+                        "party": "Democrat"
+                    },
+                    "rating": {
+                        "id": 186,
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 8,
+                        "aclu": 100,
+                        "end_citizens_united": 95,
+                        "national_education_association": 100,
+                        "national_association_of_police": 60,
+                        "national_parks_conservation": 75,
+                        "nra": 0,
+                        "numbers_usa": 13,
+                        "norml": 42,
+                        "representative_id": 186
+                    },
+                    "representative_social": {
+                        "id": 186,
+                        "website": "https://axne.house.gov/",
+                        "contact_page": "https://axne.house.gov/zip-code-lookup?form=/contact/email-me",
+                        "twitter": "https://twitter.com/RepCindyAxne",
+                        "representative_id": 186
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 12,
+                        "aclu": 0,
+                        "end_citizens_united": 15,
+                        "national_education_association": 0,
+                        "national_association_of_police": 20,
+                        "national_parks_conservation": 25,
+                        "norml": 50,
+                        "numbers_usa": 13
+                    },
+                    "compatibility": 76.6
+                }
+            },
+            {
+                "id": "187",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 188,
+                        "name": "Joni Ernst",
+                        "congressional_type": "Senator",
+                        "state": "IA",
+                        "age": 52,
+                        "photo": "https://static.votesmart.org/canphoto/128583.jpg",
+                        "gender": "Female",
+                        "district": "IA",
+                        "years_in_office": 8,
+                        "next_election": 2026,
+                        "representative_id": 187,
+                        "party": "Republican"
+                    },
+                    "rating": {
+                        "id": 187,
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 90,
+                        "aclu": 75,
+                        "end_citizens_united": 0,
+                        "national_education_association": 0,
+                        "national_association_of_police": 100,
+                        "national_parks_conservation": 0,
+                        "nra": 92,
+                        "numbers_usa": 86,
+                        "norml": 17,
+                        "representative_id": 187
+                    },
+                    "representative_social": {
+                        "id": 187,
+                        "website": "https://www.ernst.senate.gov/public/",
+                        "contact_page": "https://www.ernst.senate.gov/public/index.cfm/email-joni",
+                        "twitter": "https://twitter.com/SenJoniErnst",
+                        "representative_id": 187
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 70,
+                        "aclu": 25,
+                        "end_citizens_united": 80,
+                        "national_education_association": 100,
+                        "national_association_of_police": 20,
+                        "national_parks_conservation": 100,
+                        "norml": 75,
+                        "numbers_usa": 86
+                    },
+                    "compatibility": 17.1
+                }
+            },
+            {
+                "id": "188",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 189,
+                        "name": "Randy Feenstra",
+                        "congressional_type": "Representative",
+                        "state": "IA",
+                        "age": 53,
+                        "photo": "https://static.votesmart.org/canphoto/103301.jpg",
+                        "gender": "Male",
+                        "district": "4",
+                        "years_in_office": 2,
+                        "next_election": 2022,
+                        "representative_id": 188,
+                        "party": "Republican"
+                    },
+                    "rating": {
+                        "id": 188,
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 100,
+                        "aclu": 44,
+                        "end_citizens_united": null,
+                        "national_education_association": 0,
+                        "national_association_of_police": 80,
+                        "national_parks_conservation": null,
+                        "nra": 92,
+                        "numbers_usa": 92,
+                        "norml": 8,
+                        "representative_id": 188
+                    },
+                    "representative_social": {
+                        "id": 188,
+                        "website": "https://feenstra.house.gov/",
+                        "contact_page": "https://feenstra.house.gov/address_authentication?form=/contact",
+                        "twitter": "https://twitter.com/repfeenstra",
+                        "representative_id": 188
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 80,
+                        "aclu": 56,
+                        "end_citizens_united": 0,
+                        "national_education_association": 100,
+                        "national_association_of_police": 0,
+                        "national_parks_conservation": 0,
+                        "norml": 84,
+                        "numbers_usa": 92
+                    },
+                    "compatibility": 3.2
+                }
+            },
+            {
+                "id": "189",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 190,
+                        "name": "Charles Grassley",
+                        "congressional_type": "Senator",
+                        "state": "IA",
+                        "age": 89,
+                        "photo": "https://static.votesmart.org/canphoto/53293.jpg",
+                        "gender": "Male",
+                        "district": "IA",
+                        "years_in_office": 42,
+                        "next_election": 2022,
+                        "representative_id": 189,
+                        "party": "Republican"
+                    },
+                    "rating": {
+                        "id": 189,
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 80,
+                        "aclu": 75,
+                        "end_citizens_united": 0,
+                        "national_education_association": 0,
+                        "national_association_of_police": 60,
+                        "national_parks_conservation": 0,
+                        "nra": 100,
+                        "numbers_usa": 92,
+                        "norml": 8,
+                        "representative_id": 189
+                    },
+                    "representative_social": {
+                        "id": 189,
+                        "website": "https://www.flickr.com/photos/chuckgrassley",
+                        "contact_page": "https://www.grassley.senate.gov/constituents/questions-and-comments",
+                        "twitter": "https://twitter.com/chuckgrassley",
+                        "representative_id": 189
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 60,
+                        "aclu": 25,
+                        "end_citizens_united": 80,
+                        "national_education_association": 100,
+                        "national_association_of_police": 20,
+                        "national_parks_conservation": 100,
+                        "norml": 84,
+                        "numbers_usa": 92
+                    },
+                    "compatibility": 39.2
+                }
+            },
+            {
+                "id": "190",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 191,
+                        "name": "Ashley Hinson",
+                        "congressional_type": "Representative",
+                        "state": "IA",
+                        "age": 39,
+                        "photo": "https://static.votesmart.org/canphoto/168783.jpg",
+                        "gender": "Female",
+                        "district": "1",
+                        "years_in_office": 2,
+                        "next_election": 2022,
+                        "representative_id": 190,
+                        "party": "Republican"
+                    },
+                    "rating": {
+                        "id": 190,
+                        "planned_parenthood": 0,
+                        "americans_for_prosperity": 92,
+                        "aclu": 44,
+                        "end_citizens_united": null,
+                        "national_education_association": 0,
+                        "national_association_of_police": 80,
+                        "national_parks_conservation": null,
+                        "nra": 92,
+                        "numbers_usa": 92,
+                        "norml": 42,
+                        "representative_id": 190
+                    },
+                    "representative_social": {
+                        "id": 190,
+                        "website": "https://hinson.house.gov/",
+                        "contact_page": "https://hinson.house.gov/address_authentication?form=/contact",
+                        "twitter": "https://twitter.com/RepAshleyHinson",
+                        "representative_id": 190
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 100,
+                        "americans_for_prosperity": 72,
+                        "aclu": 56,
+                        "end_citizens_united": 0,
+                        "national_education_association": 100,
+                        "national_association_of_police": 0,
+                        "national_parks_conservation": 0,
+                        "norml": 50,
+                        "numbers_usa": 92
+                    },
+                    "compatibility": 10.0
+                }
+            },
+            {
+                "id": "191",
+                "type": "representative",
+                "attributes": {
+                    "biography": {
+                        "id": 192,
+                        "name": "Mariannette Miller-Meeks",
+                        "congressional_type": "Representative",
+                        "state": "IA",
+                        "age": 67,
+                        "photo": "https://static.votesmart.org/canphoto/103294.jpg",
+                        "gender": "Female",
+                        "district": "2",
+                        "years_in_office": 2,
+                        "next_election": 0,
+                        "representative_id": 191,
+                        "party": "Republican"
+                    },
+                    "rating": {
+                        "id": 191,
+                        "planned_parenthood": 20,
+                        "americans_for_prosperity": 92,
+                        "aclu": 44,
+                        "end_citizens_united": null,
+                        "national_education_association": 0,
+                        "national_association_of_police": 80,
+                        "national_parks_conservation": null,
+                        "nra": 92,
+                        "numbers_usa": 77,
+                        "norml": 42,
+                        "representative_id": 191
+                    },
+                    "representative_social": {
+                        "id": 191,
+                        "website": "https://millermeeks.house.gov/",
+                        "contact_page": "https://millermeeks.house.gov/contact",
+                        "twitter": "https://twitter.com/repmmm",
+                        "representative_id": 191
+                    },
+                    "user_comparison": {
+                        "planned_parenthood": 80,
+                        "americans_for_prosperity": 72,
+                        "aclu": 56,
+                        "end_citizens_united": 0,
+                        "national_education_association": 100,
+                        "national_association_of_police": 0,
+                        "national_parks_conservation": 0,
+                        "norml": 50,
+                        "numbers_usa": 77
+                    },
+                    "compatibility": 17.5
+                }
+            }
+        ]
+    },
+    "summary_statistics": {
+        "data": {
+            "id": null,
+            "type": "summary_statistics",
+            "attributes": {
+                "planned_parenthood": {
+                    "average_rating": 20.0,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 80.0
+                },
+                "americans_for_prosperity": {
+                    "average_rating": 77.0,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 57.0
+                },
+                "aclu": {
+                    "average_rating": 63.7,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 36.3
+                },
+                "end_citizens_united": {
+                    "average_rating": 31.7,
+                    "rated_politicians": "3 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 48.3
+                },
+                "national_association_of_police": {
+                    "average_rating": 76.7,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 3.3
+                },
+                "national_education_association": {
+                    "average_rating": 16.7,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 83.3
+                },
+                "national_parks_conservation": {
+                    "average_rating": 25.0,
+                    "rated_politicians": "3 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 75.0
+                },
+                "nra": {
+                    "average_rating": 78.0,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 71.0
+                },
+                "numbers_usa": {
+                    "average_rating": 75.3,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 75.3
+                },
+                "norml": {
+                    "average_rating": 26.5,
+                    "rated_politicians": "6 out of 6 are currently rated by this Special Interest Group",
+                    "user_difference": 65.5
+                }
+            }
+        }
+    }
+}
