@@ -14,7 +14,7 @@ const Header = () => {
     repData.setIsFormSubmitted(false);
     repData.setCurrentQuizResult({})
     repData.setError('')
-    setSelectedState("")
+    setSelectedState('')
   }
 
   return (
