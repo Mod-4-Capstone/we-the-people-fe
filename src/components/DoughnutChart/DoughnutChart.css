@@ -1,0 +1,9 @@
+.doughnut-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  color: white;
+}
+
