@@ -12,24 +12,6 @@
   font-family: 'Khula', sans-serif;
   font-size: 1.3rem;
 }
-/*
-form .likert:before {
-  content: '';
-  position:relative;
-  top:11px;
-  left:50%;
-  display:block;
-  background-color:#efefef;
-  height:4px;
-  width:78%;
-}
-
-form .likert li input[type=radio] {
-  display:block;
-  position:relative;
-  top:0;
-  margin-left:-6px;
-} */
 
 .likert > li {
   display: flex;
