@@ -65,8 +65,22 @@
 }
 
 @media screen and (max-width: 700px) {
-  .user-quiz-results, .quiz-results-container {
+  .user-quiz-results,
+  .quiz-results-container,
+  .result-tile-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
+}
+
+  @media screen and (max-width: 1000px) {
+    .result-tile {
+      height: 170px;
+      width: 137px;
+    }
+    .state-wide-comparison {
+      height: 366px;
+      width: 201px;
+    }
 }
