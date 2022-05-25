@@ -90,11 +90,22 @@ describe('Quiz with zipcode user flow', () => {
       .get('.percentage').eq(2).contains('50%')
     });
 
-  it.only('Should show all of the legislators associated with the zipcode provided on the quiz', () => {
+  it('Should show all of the legislators associated with the zipcode provided on the quiz', () => {
   cy.url().should('include', 'results-dashboard')
     .get('.rep-card').should('have.length', 3)
     .get('.rep-name').first().contains('Senator John Hickenlooper')
     .get('.rep-name').last().contains('Representative Diana DeGette')
+  });
+
+  it.only('Should allow the user to see all of the bio info, ratings, and percent match for each legislator', () => {
+  cy.url().should('include', 'results-dashboard')
+    .get('.rep-name').first().contains('Senator John Hickenlooper')
+    .get('.bio-party').first().contains('Party: Democrat')
+    .get('.bio-age').first().contains('Age: 70')
+    .get('.bio-gender').first().contains('Gender: Male')
+    .get('.bio-term').first().contains('Years in office: 2')
+    .get('.rep-match').first().contains('97.5% match with your beliefs')
+
   });
 
 });
