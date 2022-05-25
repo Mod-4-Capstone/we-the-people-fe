@@ -17,7 +17,7 @@
 .loader {
   width: 7rem;
   height: 7rem;
-  border: 25px solid  #fff; 
+  border: 20px solid  #fff; 
   border-top: 25px solid #E63946;;
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
