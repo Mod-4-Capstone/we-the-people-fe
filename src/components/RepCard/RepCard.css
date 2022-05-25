@@ -4,7 +4,7 @@
   box-sizing: border-box;
   border-radius: 5px;
   height: 35rem;
-  width: 35rem;
+  width: 38rem;
   padding-top: 0;
   margin: 2em;
   background-color: #F1FAEE;
@@ -67,11 +67,22 @@
 }
 
 .reelection-text {
+  display: flex;
+  align-items: center;
   background-color: #E63946;
   color: white;
   font-weight:700;
+  font-size: 20px;
   padding: .5em;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
+}
+
+.reelection {
+  margin-left: .5em;
+}
+
+.arrow-icon {
+  font-size: 1.5em;
 }

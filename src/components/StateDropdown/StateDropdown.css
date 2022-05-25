@@ -3,8 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #457B9D;
-  border-radius: 15px;
+  border-top: 3px solid #457B9D;
+  border-bottom: 3px solid #457B9D;
+  /* background-color: #457B9D; */
+  /* border-radius: 15px; */
   font-family: 'Khula', sans-serif;
   font-size: 1rem;
   padding: 1rem;
