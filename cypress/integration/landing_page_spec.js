@@ -10,10 +10,6 @@ describe('Landing Page', () => {
      .visit('http://localhost:3000/')
   })
 
-  it('Should confirm that true is equal to true', () => {
-    expect(true).to.equal(true)
-  });
-
   it('Should be able to visit the page and render a header with a title', () => {
   cy.get('.header').should('be.visible')
     .get('.title').contains('We The People')
@@ -79,21 +75,22 @@ describe('Quiz with zipcode user flow', () => {
        .get('.submit-btn').click()
   })
 
-
-
-it.only('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
+  it('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
     cy.url().should('include', 'results-dashboard')
     .get('.user-demo').should('be.visible')
   });
 
-  it('Should show a quiz results summary after the user has taken a quiz', () => {
+  it.only('Should show a quiz results summary after the user has taken a quiz', () => {
     cy.url().should('include', 'results-dashboard')
       .get('.user-demo').should('be.visible')
-      .get()
+      .get('.user-quiz-results > p').should('have.length', 10)
+      .get('.user-quiz-results > p').first().contains('You are 0% in support of legalizing abortion federally.')
+      .get('.user-quiz-results > p').last().contains('You are 100% in support of campaign spending limits.')
+
     });
 
   it('Should allow the user to select a state without the quiz and be directed to a page showing that states legislators. ', () => {
   cy.url().should('include', 'results-dashboard')
-    .get('.rep-card').should('have.length', 9)
+    .get('.rep-card').should('have.length', 3)
   });
 });
