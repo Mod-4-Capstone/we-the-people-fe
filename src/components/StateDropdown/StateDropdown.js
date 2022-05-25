@@ -93,8 +93,6 @@ const StateDropdown = (props) => {
           closeOnDocumentClick
           >
             {!props.selectedState && <div className='dropdown-error-msg'>Please select a state to continue</div>}
-            {/* <button className='go-button' disabled={!props.selectedState}>Go!</button> */}
-            {/* {!props.selectedState && <p>Please select a state to continue</p>} */}
           </Popup>
             {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
         </form>
