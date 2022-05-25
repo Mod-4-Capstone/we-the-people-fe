@@ -5,7 +5,7 @@
 
 .user-quiz-results {
   background-color: #A8DADC;
-  border-radius: 30px;
+  border-radius: 20px;
   width: 75%;
   padding: 2em;
   margin: 1em;
@@ -14,9 +14,10 @@
 
 .state-wide-comparison {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 20px;
   width: 20%;
   padding: 2em;
   margin: 1em;
@@ -49,5 +50,13 @@
 .percentage {
   font-size: 30px;
   font-weight: 500;
+}
+
+.state-percentage {
+  font-size: 50px;
+}
+
+.state-percentage-text {
+  font-size: 26px;
 }
 
