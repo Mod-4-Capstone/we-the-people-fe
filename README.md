@@ -5,7 +5,7 @@
 
 +CD Badge  ![CI Badge](https://github.com/Mod-4-Capstone/we-the-people-fe/actions/workflows/main.yml/badge.svg)
 
-//Screenshot/GIF of App landing page
+[To be inserted... Screenshot/GIF of landing page]
 ## Description
 
 We The People is a team-project written with the React JavaScript framework in 14 days.
@@ -42,7 +42,7 @@ We recognize that the 117th Congress of the United States is [more diverse](http
 This site was built using this [wireframe](https://excalidraw.com/#room=4cf813c075fa07f1f8b0,0TMMUQkLfs2zU2xTwAmx4Q) as guidance.
 
 ## Deployment
-You can see the site deployed [here](url).
+You can see the site deployed [here]().
 
 You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_the_people_be) to see endpoints, JSON contract, etc or access the [deployed backend](https://we-the-people-be.herokuapp.com/).
 
@@ -52,10 +52,10 @@ You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_
 
 The landing page of <em>We The People</em>
 
-[demo gif of main dashboard
+[To be inserted... demo gif of main dashboard]
 <details>
   <summary>Under the Hood</summary>
-  This is what's technically happening
+  Components `App`, `Layout`, `Header`, `Footer`, and the controlled-form of `Quiz` are being rendered. Within `Header` the component `State Dropdown` is being rendered. The user is able to fill out two inputs and respond to the 10 statements via a rating on a likert scale. Once the user clicks `Get My Results!` they are taken to the Representatives with Quiz Result view.
 </details>
 </br>
 
@@ -63,11 +63,10 @@ The landing page of <em>We The People</em>
 
 Description of what the component does
 
-[[demo gif of Representatives with Quiz Result
-
+[To be inserted... demo gif of Representatives with Quiz Result]
 <details>
   <summary>Under the Hood</summary>
-   This is what's technically happening
+   The user's quiz responses are sent to our backend server, along with the user's zipcode. The user's congressional representatives based on zip code and state senators are displayed for the user. The user's responses are held in state as well as being sent to the backend and are used to calculate matches, in percentages, to how representatives are rated by third-party organizations. The user can select other states to see how they apply based on their current quiz responses.
 </details>
 </br>
 
@@ -75,11 +74,10 @@ Description of what the component does
 
 Description of what the rep w/o a quiz does/looks like
 
-[[demo gif of Representatives without Quiz Result via state dropdown
-
+[To be inserted... demo gif of Representatives without Quiz Result via state dropdown]
 <details>
   <summary>Under the Hood</summary>
-  This is what's technically happening
+  A POST request is sent the the server and responses similar to those shown for a user who has taken the quiz are displayed. These cards conditionally display information to the user that are particular to the representative, but do not include the user's thoughts as those would have to be gathered throught the quiz.
 </details>
 </br>
 
@@ -87,7 +85,7 @@ Description of what the rep w/o a quiz does/looks like
 
 We The People is fully end-to-end tested with Cypress. URLs are tested and network requests are stubbed. Cypress runs during continuous integration on each push to or merge into `main`
 
-[demo gif of Cypress running
+[To be inserted... demo gif of Cypress running]
 
 
 ### Responsive Design & Accessibility
@@ -97,11 +95,9 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
 [Demo gif of Responsive Design
 
 ## Future Iterations
+- Add information related to upcoming elections to representatives' cards for user to engage with
 - 
-- 
-- 
-- 
-- 
+- Employ agile methodology by gathering and tailoring features based on user feedback. For example, determine the most effective phrasing of statements ranked by users using A/B testing
 
 ## Credits
 ### Authors: 
@@ -122,8 +118,4 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
  width="150" height="auto" /></td>
 </table>
 
-[Turing School of Software and Design's](https://github.com/turingschool-examples) Project Expectations, Evaluation, & Rubric that served as guidance for this project -> [here](https://mod4.turing.edu/projects/capstone/)
-
-
-
-....other credits?
+[Turing School of Software and Design's](https://github.com/turingschool-examples) Project Expectations, Evaluation, & Rubric that served as guidance for this project can be found [here](https://mod4.turing.edu/projects/capstone/).
