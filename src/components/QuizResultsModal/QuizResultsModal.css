@@ -69,6 +69,11 @@
   cursor: pointer;
 }
 
+.modal-button:hover {
+  background-color: #41679b;
+  color: white;
+}
+
 .modal-tiles {
   display: flex;
   align-items: center;
