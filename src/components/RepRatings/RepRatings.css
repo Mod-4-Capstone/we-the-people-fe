@@ -1,10 +1,10 @@
 .rep-issues-container {
-  border-top: 2px solid #1D3557;
+  border-top: 2px solid #1d3557;
   margin: 1em 0 1em 0;
   padding-top: 1em;
   overflow-y: scroll;
   padding: 1em;
-  color: #1D3557;
+  color: #1d3557;
 }
 
 .details-arrow {
@@ -14,10 +14,10 @@
 
 .no-rating-text {
   margin-left: 1em;
-  color: #E63946;
+  color: #e63946;
 }
 
 .rep-issues {
-  color: #E63946;
+  color: #e63946;
   font-weight: 500;
 }

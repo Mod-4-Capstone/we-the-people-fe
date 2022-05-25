@@ -1,16 +1,16 @@
 .quiz-results-container {
   display: flex;
-  font-family: 'Khula', sans-serif;
-  color: #1D3557;
+  font-family: "Khula", sans-serif;
+  color: #1d3557;
 }
 
 .user-quiz-results {
-  background-color: #A8DADC;
+  background-color: #a8dadc;
   border-radius: 20px;
   width: 75%;
   padding: 2em;
   margin: 1em;
-  box-shadow:  8px 8px 20px #345d77;
+  box-shadow: 8px 8px 20px #345d77;
 }
 
 .state-wide-comparison {
@@ -22,8 +22,8 @@
   width: 20%;
   padding: 2em;
   margin: 1em;
-  background-color: #A8DADC;
-  box-shadow:  8px 8px 20px #345d77;
+  background-color: #a8dadc;
+  box-shadow: 8px 8px 20px #345d77;
 }
 
 .result-tile-container {
@@ -43,8 +43,12 @@
   width: 20%;
   color: white;
   margin: 1em;
-  background: rgb(230,57,70);
-  background: radial-gradient(circle, rgba(226,91,106,1) 0%, rgba(230,57,70,1) 100%);
+  background: rgb(230, 57, 70);
+  background: radial-gradient(
+    circle,
+    rgba(226, 91, 106, 1) 0%,
+    rgba(230, 57, 70, 1) 100%
+  );
 }
 
 .percentage {
@@ -59,4 +63,3 @@
 .state-percentage-text {
   font-size: 25px;
 }
-

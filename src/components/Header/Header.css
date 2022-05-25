@@ -4,9 +4,9 @@
   align-items: center;
   height: 8.5rem;
   width: 100%;
-  background-color: #1D3557;
+  background-color: #1d3557;
   font-size: 2.3rem;
-  padding: .5em;
+  padding: 0.5em;
   color: white;
   top: 0%;
   position: sticky;
@@ -25,18 +25,18 @@
   display: flex;
   justify-content: flex-end;
   font-size: 1rem;
-  color: #1D3557;
+  color: #1d3557;
   background-color: white;
   border-radius: 30px;
   border: none;
-  font-family: 'Khula', sans-serif;
+  font-family: "Khula", sans-serif;
   padding: 0.5em 0.7em;
   float: right;
   cursor: pointer;
 }
 
 h1 {
-  font-family: 'IM Fell Great Primer', serif;
+  font-family: "IM Fell Great Primer", serif;
 }
 
 .header-controls {

@@ -3,17 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 3px solid #457B9D;
-  border-bottom: 3px solid #457B9D;
-  /* background-color: #457B9D; */
-  /* border-radius: 15px; */
-  font-family: 'Khula', sans-serif;
+  border-top: 3px solid #457b9d;
+  border-bottom: 3px solid #457b9d;
+  font-family: "Khula", sans-serif;
   font-size: 1rem;
   padding: 1rem;
 }
 
-.state-dropdown, .go-button {
-  font-family: 'Khula', sans-serif;
+.state-dropdown,
+.go-button {
+  font-family: "Khula", sans-serif;
   border-radius: 30px;
   border: none;
   padding: 0.2em;
@@ -25,10 +24,10 @@
 }
 
 .go-button {
-  background-color: #E63946;
+  background-color: #e63946;
   color: white;
   padding: 0.58rem;
-  outline: 2px, solid, #1D3557;
+  outline: 2px, solid, #1d3557;
 }
 
 .state-form-container {
@@ -42,11 +41,10 @@
   width: 100%;
   padding: 1em;
   border-radius: 10px;
-  border: 1px solid #F1FAEE;
-  background-color: #1E3456;
+  border: 1px solid #f1faee;
+  background-color: #1e3456;
   color: white;
-  font-family: 'Khula', sans-serif;
-
+  font-family: "Khula", sans-serif;
 }
 
 @media screen and (max-width: 700px) {
