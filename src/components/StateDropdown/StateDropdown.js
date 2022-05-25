@@ -77,15 +77,14 @@ const StateDropdown = (props) => {
       }).catch(error=> repData.setError(error.message))
     }
     repData.setIsFormSubmitted(true)
-    props.setSelectedState('default')
   }
 
   return (
     <div className="state-dropdown-container">
       <p className="state-dropdown-description">See Representatives by State:</p>
         <form className='state-form-container' onSubmit ={(e) => handleSubmit(e)}>
-          <select name="states" className="state-dropdown" id="states" defaultValue='default' onChange={(e) => props.setSelectedState(e.target.value)}>
-            <option value ='default' disabled>select state</option>
+          <select name="states" className="state-dropdown" id="states" value={props.selectedState} onChange={(e) => props.setSelectedState(e.target.value)}>
+            <option value ='' >select state</option>
             {createStateOptions()}
           </select>
             <button className='go-button' disabled={!props.selectedState}>Go!</button>
