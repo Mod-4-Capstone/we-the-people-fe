@@ -3,7 +3,7 @@
 ## See the app, deployed on Surge [here](https://wethepeople.surge.sh/).
 
 
-![CD Badge](https://github.com/github/docs/actions/workflows/main.yml/badge.svg))  ![CI Badge](https://github.com/Mod-4-Capstone/we-the-people-fe/actions/workflows/deploy.yml/badge.svg)
+![CD Badge](https://github.com/github/Mod-4-Capstone/we-the-people-fe/actions/workflows/main.yml/badge.svg)  ![CI Badge](https://github.com/Mod-4-Capstone/we-the-people-fe/actions/workflows/deploy.yml/badge.svg)
 
 [To be inserted... Screenshot/GIF of landing page]
 ## Description
