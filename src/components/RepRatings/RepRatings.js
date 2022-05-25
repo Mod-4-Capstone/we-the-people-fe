@@ -6,11 +6,10 @@ const RepRatings = ({ repData }) => {
   const data = useContext(DataContext);
   return (
     <section className="rep-issues-container">
-
-      {repData.attributes.rating.planned_parenthood !== null ?
+      {repData.attributes.rating.planned_parenthood !== null ? (
         <details className="details-arrow">
           <summary
-          className ='abortion-text'
+            className="abortion-text"
             style={
               !data.currentQuizResult.planned_parenthood
                 ? { listStyle: "square", cursor: "default" }
@@ -23,18 +22,23 @@ const RepRatings = ({ repData }) => {
           {data.currentQuizResult.nra && (
             <p className="rep-issues abortion-match">
               You match{" "}
-              {100 - repData.attributes.user_comparison.planned_parenthood}% with{" "}
-              {repData.attributes.biography.congressional_type}{" "}
+              {100 - repData.attributes.user_comparison.planned_parenthood}%
+              with {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
               on this issue
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">Planned Parenthood has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            Planned Parenthood has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.americans_for_prosperity !== null ?
+      {repData.attributes.rating.americans_for_prosperity !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -43,24 +47,31 @@ const RepRatings = ({ repData }) => {
                 : { listStyle: "default", cursor: "pointer" }
             }
           >
-            Americans for Prosperity rates this legislator at {repData.attributes.user_comparison.americans_for_prosperity}% on Budget, Spending
+            Americans for Prosperity rates this legislator at{" "}
+            {repData.attributes.user_comparison.americans_for_prosperity}% on
+            Budget, Spending
           </summary>
           {data.currentQuizResult.nra && (
-              <p className="rep-issues">
-                You match{" "}
-                {100 -
-                  repData.attributes.user_comparison.americans_for_prosperity}
-                % with {repData.attributes.biography.congressional_type}{" "}
-                {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
-                on this issue{" "}
-              </p>
-            )}
+            <p className="rep-issues">
+              You match{" "}
+              {100 -
+                repData.attributes.user_comparison.americans_for_prosperity}
+              % with {repData.attributes.biography.congressional_type}{" "}
+              {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
+              on this issue{" "}
+            </p>
+          )}
         </details>
-        :
-        <em><p className="no-rating-text">Americans for Prosperity has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            Americans for Prosperity has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.aclu !== null ?
+      {repData.attributes.rating.aclu !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -69,7 +80,8 @@ const RepRatings = ({ repData }) => {
                 : { listStyle: "default", cursor: "pointer" }
             }
           >
-            ACLU rates this legislator at {repData.attributes.user_comparison.aclu}% on Civil Liberties
+            ACLU rates this legislator at{" "}
+            {repData.attributes.user_comparison.aclu}% on Civil Liberties
           </summary>
           {data.currentQuizResult.nra && (
             <p className="rep-issues">
@@ -80,12 +92,16 @@ const RepRatings = ({ repData }) => {
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">The ACLU has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            The ACLU has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-
-      {repData.attributes.rating.end_citizens_united !== null ?
+      {repData.attributes.rating.end_citizens_united !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -100,18 +116,23 @@ const RepRatings = ({ repData }) => {
           {data.currentQuizResult.nra && (
             <p className="rep-issues">
               You match{" "}
-              {100 - repData.attributes.user_comparison.end_citizens_united}% with{" "}
-              {repData.attributes.biography.congressional_type}{" "}
+              {100 - repData.attributes.user_comparison.end_citizens_united}%
+              with {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
               on this issue
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">End Citizens United has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            End Citizens United has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.national_association_of_police !== null ?
+      {repData.attributes.rating.national_association_of_police !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -130,18 +151,24 @@ const RepRatings = ({ repData }) => {
               {" "}
               You match{" "}
               {100 -
-                repData.attributes.user_comparison.national_association_of_police}
+                repData.attributes.user_comparison
+                  .national_association_of_police}
               % with {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
               on this issue
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">National Assoc. of Police Org has not given this{repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            National Assoc. of Police Org has not given this
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.national_parks_conservation !== null ?
+      {repData.attributes.rating.national_parks_conservation !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -157,18 +184,23 @@ const RepRatings = ({ repData }) => {
           {data.currentQuizResult.nra && (
             <p className="rep-issues">
               You match{" "}
-              {100 - repData.attributes.rating.national_parks_conservation}% with{" "}
-              {repData.attributes.biography.congressional_type}{" "}
+              {100 - repData.attributes.rating.national_parks_conservation}%
+              with {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
               on this issue
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">National Parks Conservation Assoc. has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            National Parks Conservation Assoc. has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.nra !== null ?
+      {repData.attributes.rating.nra !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -177,7 +209,8 @@ const RepRatings = ({ repData }) => {
                 : { listStyle: "default", cursor: "pointer" }
             }
           >
-            NRA rates this legislator at {repData.attributes.rating.nra}% on Guns
+            NRA rates this legislator at {repData.attributes.rating.nra}% on
+            Guns
           </summary>
           {data.currentQuizResult.nra && (
             <p className="rep-issues">
@@ -188,11 +221,16 @@ const RepRatings = ({ repData }) => {
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">The NRA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            The NRA has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.numbers_usa !== null ?
+      {repData.attributes.rating.numbers_usa !== null ? (
         <details className="details-arrow">
           <summary
             style={
@@ -213,14 +251,19 @@ const RepRatings = ({ repData }) => {
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">NumbersUSA has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            NumbersUSA has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
 
-      {repData.attributes.rating.norml !== null ?
+      {repData.attributes.rating.norml !== null ? (
         <details className="details-arrow">
           <summary
-          className='mj-text'
+            className="mj-text"
             style={
               !data.currentQuizResult.nra
                 ? { listStyle: "square", cursor: "default" }
@@ -239,9 +282,14 @@ const RepRatings = ({ repData }) => {
             </p>
           )}
         </details>
-        :
-        <em><p className="no-rating-text">Norml has not given this {repData.attributes.biography.congressional_type} a rating yet.</p></em>
-      }
+      ) : (
+        <em>
+          <p className="no-rating-text">
+            Norml has not given this{" "}
+            {repData.attributes.biography.congressional_type} a rating yet.
+          </p>
+        </em>
+      )}
     </section>
   );
 };
