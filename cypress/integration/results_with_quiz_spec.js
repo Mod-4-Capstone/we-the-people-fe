@@ -98,7 +98,7 @@ describe('Quiz with zipcode user flow', () => {
   });
 
   it('Should allow the user to see the bio info and match percentage for a legislator', () => {
-  cy.url().should('include', 'results-dashboard')
+    cy.url().should('include', 'results-dashboard')
     .get('.rep-name').first().contains('Senator John Hickenlooper')
     .get('.bio-party').first().contains('Party: Democrat')
     .get('.bio-age').first().contains('Age: 70')
@@ -108,8 +108,8 @@ describe('Quiz with zipcode user flow', () => {
 
   });
 
-  it.only('Should allow the user to see all of the special interest group ratings and their match percentage per issue for each legislator', () => {
-  cy.url().should('include', 'results-dashboard')
+  it('Should allow the user to see all of the special interest group ratings and their match percentage per issue for each legislator', () => {
+    cy.url().should('include', 'results-dashboard')
     .get('.rep-name').first().contains('Senator John Hickenlooper')
     .get('.bio-party').first().contains('Party: Democrat')
     .get('.abortion-text').first().contains('Planned Parenthood rates this legislator at 100% on Abortion')
@@ -118,4 +118,10 @@ describe('Quiz with zipcode user flow', () => {
     .get('.mj-match').first().contains('You match 8% with Senator Hickenlooper on this issue')
   });
 
+  it.only('Should allow the user to click the start over button and return to the landing page', () => {
+    cy.get('.home-btn').click()
+      .url().should('include', '/')
+      .get('.quiz-header-container').should('be.visible')
+      .get('.quiz').should('be.visible')
+  });
 });
