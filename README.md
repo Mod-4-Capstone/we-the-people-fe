@@ -96,7 +96,6 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
 
 ## Future Iterations
 - Add information related to upcoming elections to representatives' cards for user to engage with
-- 
 - Employ agile methodology by gathering and tailoring features based on user feedback. For example, determine the most effective phrasing of statements ranked by users using A/B testing
 
 ## Credits
