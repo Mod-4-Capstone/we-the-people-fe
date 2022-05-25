@@ -9,23 +9,53 @@ const Statement = (props) => {
       </label>
       <ul className="likert" onChange={(e) => props.handleChange(e)}>
         <li>
-          <input className='s-disagree' required type="radio" name={props.name} value="0"/>
+          <input
+            className="s-disagree"
+            required
+            type="radio"
+            name={props.name}
+            value="0"
+          />
           <label>Strongly Disagree</label>
         </li>
         <li>
-          <input required className='disagree' type="radio" name={props.name} value="25" />
+          <input
+            required
+            className="disagree"
+            type="radio"
+            name={props.name}
+            value="25"
+          />
           <label>Disagree</label>
         </li>
         <li>
-          <input className='neutral' required type="radio" name={props.name} value="50" />
+          <input
+            className="neutral"
+            required
+            type="radio"
+            name={props.name}
+            value="50"
+          />
           <label>Neutral</label>
         </li>
         <li>
-          <input required className='agree' type="radio" name={props.name} value="75" />
+          <input
+            required
+            className="agree"
+            type="radio"
+            name={props.name}
+            value="75"
+          />
           <label>Agree</label>
         </li>
         <li>
-          <input required className ='s-agree'type="radio" name={props.name} value="100" />
+          <input
+            required
+            className="s-agree"
+            type="radio"
+            name={props.name}
+            value="100"
+          />
           <label>Strongly Agree</label>
         </li>
       </ul>

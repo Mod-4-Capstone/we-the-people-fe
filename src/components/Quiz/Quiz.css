@@ -1,6 +1,6 @@
 .quiz-header-container {
   padding: 1rem;
-  background-color : #457B9D;
+  background-color: #457b9d;
   border-radius: 30px;
   margin: 1rem;
   padding: 1rem;
@@ -15,7 +15,7 @@
 .hook-header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color : #457B9D;
+  background-color: #457b9d;
   color: white;
   text-align: center;
   margin-top: 1em;
@@ -31,7 +31,8 @@ input::-webkit-inner-spin-button {
   margin-right: 1em;
 }
 
-.gender-hook, .age-hook {
+.gender-hook,
+.age-hook {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,17 +45,22 @@ input::-webkit-inner-spin-button {
   justify-content: space-around;
   width: 80%;
   align-items: center;
-  background-color: #F1FAEE;
+  background-color: #f1faee;
   margin-bottom: 2em;
   margin-top: 2em;
   padding: 2em;
   border-radius: 30px;
-  box-shadow:  8px 8px 30px #345d77,
-  -8px -8px 30px #5699c3;
+  box-shadow: 8px 8px 30px #345d77, -8px -8px 30px #5699c3;
 }
 
-select, input, button, .quote, .input-tagline, .gender-hook, .age-hook {
-  font-family: 'Khula', sans-serif;
+select,
+input,
+button,
+.quote,
+.input-tagline,
+.gender-hook,
+.age-hook {
+  font-family: "Khula", sans-serif;
 }
 
 .input-tagline {
@@ -74,25 +80,25 @@ select, input, button, .quote, .input-tagline, .gender-hook, .age-hook {
   width: 13em;
   height: 2.4em;
   border-radius: 50px;
-  border: 1px solid #1D3557;
+  border: 1px solid #1d3557;
   text-align: center;
   cursor: pointer;
 }
 
 .quiz-header {
-  font-family: 'Khula', sans-serif;
+  font-family: "Khula", sans-serif;
   font-size: 20px;
 }
 
 .submit-btn {
   width: 14em;
   border-radius: 50px;
-  background-color: #1D3557;
+  background-color: #1d3557;
   border: none;
-  padding: .5em;
+  padding: 0.5em;
   color: white;
-  margin-top: .5em;
-  font-family: 'Khula', sans-serif;
+  margin-top: 0.5em;
+  font-family: "Khula", sans-serif;
   cursor: pointer;
   font-size: 20px;
 }
@@ -107,10 +113,10 @@ select, input, button, .quote, .input-tagline, .gender-hook, .age-hook {
 
 @media screen and (max-width: 700px) {
   .likert {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
   }
 
   .quiz-header-container {
@@ -134,13 +140,13 @@ select, input, button, .quote, .input-tagline, .gender-hook, .age-hook {
   }
 
   .quiz {
-     padding: 1em;
+    padding: 1em;
   }
 
   .quote {
-  font-size: large;
+    font-size: large;
   }
-  
+
   .age-dropdown {
     margin-right: 0;
   }

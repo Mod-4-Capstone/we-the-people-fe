@@ -1,15 +1,15 @@
 .likert {
   display: flex;
   list-style: none;
-  width:100%;
-  margin:0;
+  width: 100%;
+  margin: 0;
   justify-content: center;
-  border-bottom:2px solid #efefef;
-  font-family: 'Mukta Vaani', sans-serif;
+  border-bottom: 2px solid #efefef;
+  font-family: "Mukta Vaani", sans-serif;
 }
 
 .statement {
-  font-family: 'Khula', sans-serif;
+  font-family: "Khula", sans-serif;
   font-size: 1.3rem;
 }
 
@@ -25,13 +25,12 @@ input {
   height: 1em;
   width: 1em;
   border-radius: 2px;
-  border: 1px solid #1D3557;
+  border: 1px solid #1d3557;
   padding: 0.5em;
   -webkit-appearance: none;
   background-color: white;
 }
 
 input:checked {
-  background-color: #1D3557;
+  background-color: #1d3557;
 }
-

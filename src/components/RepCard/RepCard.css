@@ -7,10 +7,9 @@
   width: 38rem;
   padding-top: 0;
   margin: 2em;
-  background-color: #F1FAEE;
-  box-shadow:  8px 8px 30px #345d77,
-  -8px -8px 30px #5699c3;
-  font-family: 'Khula', sans-serif;
+  background-color: #f1faee;
+  box-shadow: 8px 8px 30px #345d77, -8px -8px 30px #5699c3;
+  font-family: "Khula", sans-serif;
 }
 
 .rep-img {
@@ -29,11 +28,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #1D3557;
+  color: #1d3557;
 }
 
 .bio-text {
-  margin: .2em;
+  margin: 0.2em;
 }
 
 .rep-name {
@@ -42,12 +41,12 @@
 
 .rep-match {
   font-size: 17px;
-  margin-top: .5em;
-  background-color: #E63946;
+  margin-top: 0.5em;
+  background-color: #e63946;
   border-radius: 30px;
   color: white;
-  padding: .5em;
-  font-weight:700;
+  padding: 0.5em;
+  font-weight: 700;
   align-self: center;
 }
 
@@ -56,7 +55,7 @@
   align-items: center;
   width: 100%;
   margin-left: 1em;
-  color: #1D3557;
+  color: #1d3557;
 }
 
 .mail-icon {
@@ -70,18 +69,18 @@
 .reelection-text {
   display: flex;
   align-items: center;
-  background-color: #E63946;
+  background-color: #e63946;
   color: white;
-  font-weight:700;
+  font-weight: 700;
   font-size: 20px;
-  padding: .5em;
+  padding: 0.5em;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
 }
 
 .reelection {
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 
 .arrow-icon {
