@@ -35,6 +35,18 @@
   width: 100%;
 }
 
+.dropdown-error-msg {
+  height: 1000%;
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid #F1FAEE;
+  background-color: #1E3456;
+  color: white;
+  font-family: 'Khula', sans-serif;
+
+}
+
 @media screen and (max-width: 700px) {
   .state-dropdown-container {
     padding: 0.5rem;
