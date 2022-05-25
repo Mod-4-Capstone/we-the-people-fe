@@ -4,8 +4,7 @@ import { postReps } from '../../apiCalls';
 import { DataContext } from "../../contexts/DataContext";
 import { Redirect } from "react-router-dom"
 import states from '../../data/data';
-
-
+import Popup from 'reactjs-popup';
 
 const StateDropdown = (props) => {
 
@@ -87,10 +86,18 @@ const StateDropdown = (props) => {
             <option value ='' >select state</option>
             {createStateOptions()}
           </select>
-            <button className='go-button' disabled={!props.selectedState}>Go!</button>
+          <Popup
+          trigger={<span><button className="go-button" disabled={!props.selectedState}>Go!</button></span>}
+          position="bottom center"
+          on={['hover', 'click', 'focus']}
+          closeOnDocumentClick
+          >
+            {!props.selectedState && <div className='dropdown-error-msg'>Please select a state to continue</div>}
+            {/* <button className='go-button' disabled={!props.selectedState}>Go!</button> */}
+            {/* {!props.selectedState && <p>Please select a state to continue</p>} */}
+          </Popup>
             {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
         </form>
-        {!props.selectedState && <p>Please select a state to continue</p>}
       </div>
     );
 }
