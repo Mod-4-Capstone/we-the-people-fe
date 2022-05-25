@@ -5,13 +5,15 @@ import {FiMail} from 'react-icons/fi'
 import RepRatings from "../RepRatings/RepRatings"
 import defaultImg from '../../assets/senate.png'
 import { DataContext } from "../../contexts/DataContext";
+import {MdOutlineDoubleArrow} from 'react-icons/md'
 
 const RepCard = ({repData}) => {
   const data = useContext(DataContext)
   return (
     <div className="rep-card">
       <div className="reelection-text">
-        <p>Up for re-election in {repData.attributes.biography.next_election}</p>
+        <MdOutlineDoubleArrow className='arrow-icon'/>
+        <p className='reelection'>Up for re-election in {repData.attributes.biography.next_election}</p>
       </div>
       <div className="bio-info">
         <div>

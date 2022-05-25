@@ -14,5 +14,9 @@
 .no-rating-text {
   margin-left: 1em;
   color: #E63946;
+}
 
+.rep-issues {
+  color: #E63946;
+  font-weight: 500;
 }

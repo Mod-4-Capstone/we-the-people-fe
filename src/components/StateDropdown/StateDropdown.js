@@ -4,8 +4,7 @@ import { postReps } from '../../apiCalls';
 import { DataContext } from "../../contexts/DataContext";
 import { Redirect } from "react-router-dom"
 import states from '../../data/data';
-
-
+import Popup from 'reactjs-popup';
 
 const StateDropdown = (props) => {
 
@@ -77,21 +76,28 @@ const StateDropdown = (props) => {
       }).catch(error=> repData.setError(error.message))
     }
     repData.setIsFormSubmitted(true)
-    props.setSelectedState('default')
   }
 
   return (
     <div className="state-dropdown-container">
       <p className="state-dropdown-description">See Representatives by State:</p>
         <form className='state-form-container' onSubmit ={(e) => handleSubmit(e)}>
-          <select name="states" className="state-dropdown" id="states" defaultValue='default' onChange={(e) => props.setSelectedState(e.target.value)}>
-            <option value ='default' disabled>select state</option>
+          <select name="states" className="state-dropdown" id="states" value={props.selectedState} onChange={(e) => props.setSelectedState(e.target.value)}>
+            <option value ='' >select state</option>
             {createStateOptions()}
           </select>
-            <button className='go-button' disabled={!props.selectedState}>Go!</button>
+          <Popup
+          trigger={<span><button className="go-button" disabled={!props.selectedState}>Go!</button></span>}
+          position="bottom center"
+          on={['hover', 'click', 'focus']}
+          closeOnDocumentClick
+          >
+            {!props.selectedState && <div className='dropdown-error-msg'>Please select a state to continue</div>}
+            {/* <button className='go-button' disabled={!props.selectedState}>Go!</button> */}
+            {/* {!props.selectedState && <p>Please select a state to continue</p>} */}
+          </Popup>
             {repData.isFormSubmitted && <Redirect to="/results-dashboard"/>}
         </form>
-        {!props.selectedState && <p>Please select a state to continue</p>}
       </div>
     );
 }
