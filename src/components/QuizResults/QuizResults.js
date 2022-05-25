@@ -2,6 +2,7 @@ import React, { useContext }from "react"
 import "./QuizResults.css"
 import { DataContext } from '../../contexts/DataContext'
 import QuizResultsModal from "../QuizResultsModal/QuizResultsModal"
+import DoughnutChart from "../DoughnutChart/DoughnutChart"
 
 const QuizResults = () => {
 
@@ -26,16 +27,19 @@ const QuizResults = () => {
         </div>
         <section className="result-tile-container">
           <div className="result-tile">
-            <p className="percentage">{repData.currentQuizResult.planned_parenthood}%</p>
-            <p>in support of legalizing abortion federally</p>
+            <DoughnutChart percentage={repData.currentQuizResult.planned_parenthood} issue={"Abortion"}/>
+            {/* <p className="percentage">{repData.currentQuizResult.planned_parenthood}%</p>
+            <p>in support of legalizing abortion federally</p> */}
           </div>
           <div className="result-tile">
-            <p className="percentage">{repData.currentQuizResult.national_education_association}%</p>
-            <p>in support of better funding for public schools.</p>
+            <DoughnutChart percentage={repData.currentQuizResult.national_education_association} issue={"Education"}/>
+            {/* <p className="percentage">{repData.currentQuizResult.national_education_association}%</p>
+            <p>in support of better funding for public schools.</p> */}
           </div>
           <div className="result-tile">
-            <p className="percentage">{repData.currentQuizResult.nra}%</p>
-            <p>in support of having less firearm purchase restrictions.</p>
+            <DoughnutChart percentage={repData.currentQuizResult.nra} issue={"Guns"}/>
+            {/* <p className="percentage">{repData.currentQuizResult.nra}%</p>
+            <p>in support of having less firearm purchase restrictions.</p> */}
           </div>
         </section>
         <QuizResultsModal />

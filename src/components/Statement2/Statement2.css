@@ -22,4 +22,16 @@
 
 input {
   cursor: pointer;
+  height: 1em;
+  width: 1em;
+  border-radius: 2px;
+  border: 1px solid #1D3557;
+  padding: 0.5em;
+  -webkit-appearance: none;
+  background-color: white;
 }
+
+input:checked {
+  background-color: #1D3557;
+}
+
