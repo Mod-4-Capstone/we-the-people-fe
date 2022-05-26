@@ -61,7 +61,7 @@ You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_
 
 The landing page of <em>We The People</em> shows a header with a quote from the constitution and demographic disparities between the US Population and the body of Congress. After viewing these statistics the user is encouraged to fill out a questionaire by responding to 10 statements via a likert scale, ranging from strongly disagree to strongly agree. Once the user click the `Get My Results` button, they are taken to a page that displays congressional representatives based on the entered zipcode and compares the user's responses to the policticians views as rated by thir-party organizations. The user can then look at other states and see how other representatives compare to their current quiz answers.
 
-![we-the-people-landing-page-and-quiz](https://user-images.githubusercontent.com/63659270/170385026-c365e3cb-ac2c-4850-a83c-c4611c287ae7.gif)
+![we-the-people-demo](https://user-images.githubusercontent.com/92049763/170544523-da554ee4-237c-4572-bedf-7def90dfd83a.gif)
 
 <details>
   <summary>Under the Hood</summary>
@@ -91,6 +91,7 @@ We The People is fully end-to-end tested with Cypress. URLs are tested and netwo
 ### Responsive Design & Accessibility
 
 We The People was built to be responsive across desktop, laptop, tablet, and mobile screen sizes and be fully tab and touch focusable for screen-reader accessibility. We are committed to continually improving to ensure our site is accessible to all users and welcome any and all feedback!
+
 
 [Demo gif of Responsive Design]
 
