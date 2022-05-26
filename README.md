@@ -83,7 +83,7 @@ If a user does not want to take the quiz they are able to select a state from th
 
 We The People is fully end-to-end tested with Cypress. URLs are tested and network requests are stubbed. Cypress runs during continuous integration on each push to or merge into `main`
 
-[To be inserted... demo gif of Cypress running]
+![To be inserted... demo gif of Cypress running](https://media.giphy.com/media/yW7Ntn4RwJKbaaOwp4/giphy.gif)
 
 
 ### Responsive Design & Accessibility
