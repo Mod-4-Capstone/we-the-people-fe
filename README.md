@@ -49,12 +49,6 @@ You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_
 
 ## Features
 
-<details>
-  <summary>Under the Hood</summary>
-  Components `App`, `Layout`, `Header`, `Footer`, and the controlled-form of `Quiz` are being rendered. Within `Header` the component `State Dropdown` is being rendered. The user is able to fill out two inputs and respond to the 10 statements via a rating on a likert scale. Once the user clicks `Get My Results!` they are taken to the Representatives with Quiz Result view.
-</details>
-</br>
-
 ### Landing Page and Representatives with Quiz Result
 
 The landing page of <em>We The People</em> shows a header with a quote from the constitution and demographic disparities between the US Population and the body of Congress. After viewing these statistics the user is encouraged to fill out a questionaire by responding to 10 statements via a likert scale, ranging from strongly disagree to strongly agree. Once the user click the `Get My Results` button, they are taken to a page that displays congressional representatives based on the entered zipcode and compares the user's responses to the policticians views as rated by thir-party organizations. The user can then look at other states and see how other representatives compare to their current quiz answers.

@@ -21,7 +21,7 @@ describe('Landing Page', () => {
     .get('.gender').contains('Female')
     .get('.us-population-rep').should('be.visible')
     .get('.congress-rep').should('be.visible')
-    .get('.age').contains('65 or older')
+    .get('.age').contains('64 or younger')
   });
 
   it('Should be able to visit the page and see a quiz form, and a state select dropdown', () => {
