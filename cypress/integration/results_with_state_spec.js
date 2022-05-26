@@ -28,7 +28,7 @@ describe('Quiz with state user flow', () => {
     .get('.user-demo').should('be.visible')
   });
 
-  it.only('Should allow the user to select a state after submitting a quiz, and the legislators for that state, and their comparison percentages', () => {
+  it('Should allow the user to select a state after submitting a quiz, and the legislators for that state, and their comparison percentages', () => {
     cy.get('.state-dropdown').select('Iowa')
       .fixture('stateLegislatorData.json')
       .then((legislatorData) => {cy.intercept('POST', 'https://we-the-people-be.herokuapp.com/api/v2/state_with_quiz', {
@@ -48,4 +48,9 @@ describe('Quiz with state user flow', () => {
       .get('.mj-text').first().contains('Norml rates this legislator at 42% on Marijuana')
       .get('.mj-match').first().contains('You match 58% with Representative Axne on this issue')
   })
+
+  it('Should have legislator cards that show a separate message if a legislator is not rated by an interest group. ', () => {
+    cy.get('.no-rating-text').eq(2).should('be.visible')
+  });
+
 });

@@ -17,6 +17,14 @@ describe('State dropdown without a quiz flow', () => {
       .get('.rep-card').should('have.length', 6)
   });
 
+  it('Should not allow the user to click the go button until a state is selected', () => {
+    cy.get('.go-button').should('be.disabled')
+      .get('.state-dropdown').select('Iowa')
+      .get('.go-button').click()
+      .url().should('include', 'results-dashboard')
+      .get('.rep-card').should('have.length', 6)
+  });
+
   it('Should show each legislators bio information, and ratings', () => {
     cy.get('.state-dropdown').select('Iowa')
       .get('.go-button').click()
@@ -30,9 +38,9 @@ describe('State dropdown without a quiz flow', () => {
       .get('.contact-text').first().contains('Contact Representative Axne here')
     });
 
-    it('Should allow the user to click a legislators contact info, and be redirected to their personal contact page', () => {
-      cy.get('.state-dropdown').select('Iowa')
-        .get('.go-button').click()
-        .url().should('include', 'results-dashboard')
+  it('Should allow the user to click a legislators contact info, and be redirected to their personal contact page', () => {
+    cy.get('.state-dropdown').select('Iowa')
+      .get('.go-button').click()
+      .get('.contact-text').should('have.attr', 'href')
     });
 });

@@ -85,7 +85,7 @@ describe('Quiz with zipcode user flow', () => {
     .get('.user-demo').should('be.visible')
   });
 
-  it.only('Should show a quiz results summary after the user has taken a quiz', () => {
+  it('Should show a quiz results summary after the user has taken a quiz', () => {
     cy.url().should('include', 'results-dashboard')
       .get('.user-demo > h2').should('be.visible').contains(`What's important to you:`)
       .get('.result-tile').eq(0).should('be.visible')
