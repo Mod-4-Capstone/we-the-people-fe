@@ -49,8 +49,6 @@ You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_
 
 ## Features
 
-
-
 <details>
   <summary>Under the Hood</summary>
   Components `App`, `Layout`, `Header`, `Footer`, and the controlled-form of `Quiz` are being rendered. Within `Header` the component `State Dropdown` is being rendered. The user is able to fill out two inputs and respond to the 10 statements via a rating on a likert scale. Once the user clicks `Get My Results!` they are taken to the Representatives with Quiz Result view.
@@ -71,9 +69,9 @@ The landing page of <em>We The People</em> shows a header with a quote from the 
 
 ### Representatives without Quiz Result
 
-![we-the-people-without-the-quiz](https://user-images.githubusercontent.com/63659270/170387519-7264aa31-24b9-473a-9488-82f6d3214c8d.gif)
+If a user does not want to take the quiz they are able to select a state from the dropdown menu and see <em>all</em> the representatives for that state as well as how the representative is rated via Special Interest Groups(SIG). The user can also navigate to other states using the dropdown menu.
 
-If a user does not want to take the quiz they are able to select a state from the dropdown menu and see all the representatives for that state as well as where they
+![we-the-people-new-state-demo](https://user-images.githubusercontent.com/92049763/170546639-adfc9d80-ae3d-47b1-b3c6-bc4cdf4c1503.gif)
 
 <details>
   <summary>Under the Hood</summary>
