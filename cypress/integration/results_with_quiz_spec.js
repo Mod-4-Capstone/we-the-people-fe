@@ -80,14 +80,17 @@ describe('Quiz with zipcode user flow', () => {
     .get('.user-demo').should('be.visible')
   });
 
-  it('Should show a quiz results summary after the user has taken a quiz', () => {
+  it('Should allow the user to submit a fully filled out quiz, and be redirected to a new page with the results', () => {
+    cy.url().should('include', 'results-dashboard')
+    .get('.user-demo').should('be.visible')
+  });
+
+  it.only('Should show a quiz results summary after the user has taken a quiz', () => {
     cy.url().should('include', 'results-dashboard')
       .get('.user-demo > h2').should('be.visible').contains(`What's important to you:`)
-      .get('.result-tile > p').eq(1).contains('in support of legalizing abortion federally')
-      .get('.result-summary').eq(1).contains('in support of better funding for public schools.')
-      .get('.result-summary').eq(2).contains('in support of having less firearm purchase restrictions.')
-      .get('.percentage').eq(1).contains('25%')
-      .get('.percentage').eq(2).contains('50%')
+      .get('.result-tile').eq(0).should('be.visible')
+      .get('.result-tile').eq(1).should('be.visible')
+      .get('.result-tile').eq(2).should('be.visible')
     });
 
   it('Should show all of the legislators associated with the zipcode provided on the quiz', () => {
@@ -118,10 +121,51 @@ describe('Quiz with zipcode user flow', () => {
     .get('.mj-match').first().contains('You match 8% with Senator Hickenlooper on this issue')
   });
 
-  it.only('Should allow the user to click the start over button and return to the landing page', () => {
+  it('Should allow the user to click the start over button and return to the landing page', () => {
     cy.get('.home-btn').click()
       .url().should('include', '/')
       .get('.quiz-header-container').should('be.visible')
       .get('.quiz').should('be.visible')
   });
 });
+
+  describe('Quiz with zipcode user flow - sad paths', () => {
+
+    beforeEach(() => {
+        cy.visit(('http://localhost:3000/'))
+    });
+
+  it('Should direct the user to an error page if an invalid zipcode is entered on the form', () => {
+    cy.get('.age-dropdown').select('18-28')
+     .get('.zipcode-input').type(33333)
+     .get('.s-disagree').eq(0).check()
+     .get('.disagree').eq(1).check()
+     .get('.neutral').eq(2).check()
+     .get('.agree').eq(3).check()
+     .get('.s-agree').eq(4).check()
+     .get('.s-disagree').eq(5).check()
+     .get('.disagree').eq(6).check()
+     .get('.neutral').eq(7).check()
+     .get('.agree').eq(8).check()
+     .get('.s-agree').eq(9).check()
+     .get('.submit-btn').click()
+     .get('.error-container').should('be.visible')
+     .get('.error-container > h1').contains('Whoops! Something went wrong.')
+  });
+
+  it('Should not let the user submit the form if a form field is missing', () => {
+    cy.get('.age-dropdown').select('18-28')
+     .get('.s-disagree').eq(0).check()
+     .get('.disagree').eq(1).check()
+     .get('.neutral').eq(2).check()
+     .get('.agree').eq(3).check()
+     .get('.s-agree').eq(4).check()
+     .get('.s-disagree').eq(5).check()
+     .get('.disagree').eq(6).check()
+     .get('.neutral').eq(7).check()
+     .get('.agree').eq(8).check()
+     .get('.s-agree').eq(9).check()
+     .get('.submit-btn').click()
+     .url().should('include', '/')
+  });
+})
