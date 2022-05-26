@@ -14,7 +14,7 @@ const QuizResults = () => {
       return (acc += groupObj[sigKey].user_difference);
     }, 0);
     if (repData.summaryStats.data) {
-      return 100 - (totalStat / groupKeys.length).toFixed(1);
+      return (100 - (totalStat / groupKeys.length)).toFixed(1);
     }
   };
 
