@@ -92,8 +92,7 @@ We The People is fully end-to-end tested with Cypress. URLs are tested and netwo
 
 We The People was built to be responsive across desktop, laptop, tablet, and mobile screen sizes and be fully tab and touch focusable for screen-reader accessibility. We are committed to continually improving to ensure our site is accessible to all users and welcome any and all feedback!
 
-
-[Demo gif of Responsive Design]
+![mobile-we-the-people-with-the-quiz](https://user-images.githubusercontent.com/63659270/170545377-e8edbaf7-4894-4f2b-bd84-791326a84a7a.gif)
 
 ## Future Iterations
 - Add information related to upcoming elections to representatives' cards for user to engage with
