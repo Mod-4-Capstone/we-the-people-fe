@@ -21,7 +21,7 @@ const RepCard = ({ repData }) => {
         <div>
           <a href={repData.attributes.representative_social.website} 
              target="_blank" 
-             rel="noopener noreferrer">
+             rel="noreferrer">
             <img
               src={
                 repData.attributes.biography.photo
@@ -79,7 +79,7 @@ const RepCard = ({ repData }) => {
               className="contact-text"
               href={repData.attributes.representative_social.contact_page}
               target="_blank" 
-              rel="noopener noreferrer"
+              rel="noreferrer"
             >
               Contact {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
