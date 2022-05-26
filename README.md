@@ -100,13 +100,34 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
 
 ## Credits
 ### Authors: 
-<table>
+<table style="width:75%">
     <tr>
-        <td> Jess Fatta  <a href="https://github.com/JessFatta">GitHub</td>
-        <td> Maddie Law  <a href="https://github.com/maddielaw">GitHub</td>
-        <td> Nicole Valentini  <a href="https://github.com/nvalentini21">GitHub</td>
-        <td> Zach Liibbe <a href="https://github.com/zliibbe">GitHub</td>
+        <th>Jess Fatta</th>
+        <th> Maddie Law</th>
+        <th> Nicole Valentini</td>
+        <th> Zach Liibbe</td>
     </tr>
+    <tr>
+        <td>  
+        <a href="https://github.com/JessFatta">GitHub  -
+        <a href="https://www.linkedin.com/in/jessica-fatta/">LinkedIn</td>
+        </td>
+        <td>
+        <a href="https://github.com/maddielaw">GitHub  -
+        <a href="https://www.linkedin.com/in/mlaw1/">LinkedIn</td>
+        </td>
+        <td>
+        <a href="https://github.com/nvalentini21">GitHub  -
+        <a href="https://www.linkedin.com/in/nicole-valentini-9a576516b/">LinkedIn</td>
+        </td>
+        <td>
+        <a href="https://github.com/zliibbe">GitHub  -
+        <a href="https://www.linkedin.com/in/zachliibbe/">LinkedIn
+        </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
 <td><img src="https://github.com/JessFatta.png" alt="Jess"
  width="150" height="auto" /></td>
 <td><img src="https://github.com/maddielaw.png" alt="Maddie"
@@ -116,5 +137,6 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
  <td><img src="https://github.com/zliibbe.png" alt="Zach"
  width="150" height="auto" /></td>
 </table>
+</tr>
 
 [Turing School of Software and Design's](https://github.com/turingschool-examples) Project Expectations, Evaluation, & Rubric that served as guidance for this project can be found [here](https://mod4.turing.edu/projects/capstone/).
