@@ -49,8 +49,6 @@ You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_
 
 ## Features
 
-
-
 <details>
   <summary>Under the Hood</summary>
   Components `App`, `Layout`, `Header`, `Footer`, and the controlled-form of `Quiz` are being rendered. Within `Header` the component `State Dropdown` is being rendered. The user is able to fill out two inputs and respond to the 10 statements via a rating on a likert scale. Once the user clicks `Get My Results!` they are taken to the Representatives with Quiz Result view.
@@ -61,7 +59,7 @@ You can also clone down the [backend repo](https://github.com/Mod-4-Capstone/we_
 
 The landing page of <em>We The People</em> shows a header with a quote from the constitution and demographic disparities between the US Population and the body of Congress. After viewing these statistics the user is encouraged to fill out a questionaire by responding to 10 statements via a likert scale, ranging from strongly disagree to strongly agree. Once the user click the `Get My Results` button, they are taken to a page that displays congressional representatives based on the entered zipcode and compares the user's responses to the policticians views as rated by thir-party organizations. The user can then look at other states and see how other representatives compare to their current quiz answers.
 
-![we-the-people-landing-page-and-quiz](https://user-images.githubusercontent.com/63659270/170385026-c365e3cb-ac2c-4850-a83c-c4611c287ae7.gif)
+![we-the-people-demo](https://user-images.githubusercontent.com/92049763/170544523-da554ee4-237c-4572-bedf-7def90dfd83a.gif)
 
 <details>
   <summary>Under the Hood</summary>
@@ -71,9 +69,9 @@ The landing page of <em>We The People</em> shows a header with a quote from the 
 
 ### Representatives without Quiz Result
 
-![we-the-people-without-the-quiz](https://user-images.githubusercontent.com/63659270/170387519-7264aa31-24b9-473a-9488-82f6d3214c8d.gif)
+If a user does not want to take the quiz they are able to select a state from the dropdown menu and see <em>all</em> the representatives for that state as well as how the representative is rated via Special Interest Groups(SIG). The user can also navigate to other states using the dropdown menu.
 
-If a user does not want to take the quiz they are able to select a state from the dropdown menu and see all the representatives for that state as well as where they
+![we-the-people-new-state-demo](https://user-images.githubusercontent.com/92049763/170546639-adfc9d80-ae3d-47b1-b3c6-bc4cdf4c1503.gif)
 
 <details>
   <summary>Under the Hood</summary>
@@ -83,16 +81,17 @@ If a user does not want to take the quiz they are able to select a state from th
 
 ### Testing
 
-We The People is fully end-to-end tested with Cypress. URLs are tested and network requests are stubbed. Cypress runs during continuous integration on each push to or merge into `main`
+We The People is fully end-to-end tested with Cypress. URLs are tested and network requests are stubbed. Cypress runs during continuous integration on each push to or merge into `main`, and all passing tests are reflected via the passing check (as seen in second image below).
 
-[To be inserted... demo gif of Cypress running]
+![To be inserted... demo gif of Cypress running](https://media.giphy.com/media/yW7Ntn4RwJKbaaOwp4/giphy.gif)
+<img width="800" alt="Screen Shot 2022-05-26 at 11 52 00 AM" src="https://user-images.githubusercontent.com/92831895/170550656-2d1cc1a9-b182-4c00-88f1-4e42a6d18e11.png">
 
 
 ### Responsive Design & Accessibility
 
 We The People was built to be responsive across desktop, laptop, tablet, and mobile screen sizes and be fully tab and touch focusable for screen-reader accessibility. We are committed to continually improving to ensure our site is accessible to all users and welcome any and all feedback!
 
-[Demo gif of Responsive Design]
+![mobile-we-the-people-with-the-quiz](https://user-images.githubusercontent.com/63659270/170545377-e8edbaf7-4894-4f2b-bd84-791326a84a7a.gif)
 
 ## Future Iterations
 - Add information related to upcoming elections to representatives' cards for user to engage with
@@ -100,13 +99,34 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
 
 ## Credits
 ### Authors: 
-<table>
+<table style="width:75%">
     <tr>
-        <td> Jess Fatta  <a href="https://github.com/JessFatta">GitHub</td>
-        <td> Maddie Law  <a href="https://github.com/maddielaw">GitHub</td>
-        <td> Nicole Valentini  <a href="https://github.com/nvalentini21">GitHub</td>
-        <td> Zach Liibbe <a href="https://github.com/zliibbe">GitHub</td>
+        <th>Jess Fatta</th>
+        <th> Maddie Law</th>
+        <th> Nicole Valentini</td>
+        <th> Zach Liibbe</td>
     </tr>
+    <tr>
+        <td>  
+        <a href="https://github.com/JessFatta">GitHub  -
+        <a href="https://www.linkedin.com/in/jessica-fatta/">LinkedIn</td>
+        </td>
+        <td>
+        <a href="https://github.com/maddielaw">GitHub  -
+        <a href="https://www.linkedin.com/in/mlaw1/">LinkedIn</td>
+        </td>
+        <td>
+        <a href="https://github.com/nvalentini21">GitHub  -
+        <a href="https://www.linkedin.com/in/nicole-valentini-9a576516b/">LinkedIn</td>
+        </td>
+        <td>
+        <a href="https://github.com/zliibbe">GitHub  -
+        <a href="https://www.linkedin.com/in/zachliibbe/">LinkedIn
+        </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
 <td><img src="https://github.com/JessFatta.png" alt="Jess"
  width="150" height="auto" /></td>
 <td><img src="https://github.com/maddielaw.png" alt="Maddie"
@@ -116,5 +136,6 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
  <td><img src="https://github.com/zliibbe.png" alt="Zach"
  width="150" height="auto" /></td>
 </table>
+</tr>
 
 [Turing School of Software and Design's](https://github.com/turingschool-examples) Project Expectations, Evaluation, & Rubric that served as guidance for this project can be found [here](https://mod4.turing.edu/projects/capstone/).
