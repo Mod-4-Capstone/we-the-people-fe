@@ -73,7 +73,7 @@ const QuizResultsModal = () => {
               in support of the federal government{" "}
               {<p className="modal-tiles-em">legalizing marijuana.</p>}
             </p>
-            <p className="modal-tiles five">
+            <p className="modal-tiles six">
               <MdOutlineHowToVote className="vote-icon" /> You are{" "}
               {
                 <p className="modal-tiles-em">
@@ -83,7 +83,7 @@ const QuizResultsModal = () => {
               in support of{" "}
               {<p className="modal-tiles-em">funding the police.</p>}
             </p>
-            <p className="modal-tiles five">
+            <p className="modal-tiles seven">
               <MdOutlineHowToVote className="vote-icon" /> You are{" "}
               {
                 <p className="modal-tiles-em">

@@ -1,6 +1,6 @@
 .modal {
   background-color: #1e3456;
-  height: 60vh;
+  height: 70vh;
   width: 60vw;
   border-radius: 15px;
   color: white;
@@ -77,6 +77,7 @@
 .modal-tiles {
   display: flex;
   align-items: center;
+  border-bottom: solid white;
 }
 
 .modal-tiles-em {
@@ -88,7 +89,40 @@
   font-weight: 600;
 }
 
+/* .one,
+.three,
+.five,
+.seven{
+  background-color: #A8DADC;
+  color: black;
+}
+
+.two,
+.four,
+.six{
+  background-color: #A8DADC;
+  color: black;
+} */
+
 .vote-icon {
   font-size: 20px;
   margin-right: 0.5em;
+}
+
+@media screen and (max-width: 1355px) {
+  .modal-titles-em {
+    font-size: 18px;
+  }
+  .modal-tiles {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .modal{
+    height: 70vh;
+  }
+
+  .content {
+    overflow-y: scroll;
+  }
 }
