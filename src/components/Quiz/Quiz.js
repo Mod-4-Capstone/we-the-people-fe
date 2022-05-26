@@ -78,9 +78,9 @@ const Quiz = (props) => {
             <p className="congress-rep">117th Congress: 27.5%</p>
           </div>
           <div className="age-hook">
-            <p className="age">65 or older</p>
-            <p className="us-population-rep">U.S. Population: 16.5%</p>
-            <p className="congress-rep">117th Congress: 40%</p>
+            <p className="age">64 or younger</p>
+            <p className="us-population-rep">U.S. Population: 83.5%</p>
+            <p className="congress-rep">117th Congress: 60%</p>
           </div>
         </section>
       </div>
