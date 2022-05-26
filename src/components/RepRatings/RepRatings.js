@@ -84,7 +84,7 @@ const RepRatings = ({ repData }) => {
             {repData.attributes.user_comparison.aclu}% on Civil Liberties
           </summary>
           {data.currentQuizResult.nra && (
-            <p className="rep-issues">
+            <p className="rep-issues aclu-text">
               You match {100 - repData.attributes.user_comparison.aclu}% with{" "}
               {repData.attributes.biography.congressional_type}{" "}
               {repData.attributes.biography.name.split(" ").slice(-1).join(" ")}{" "}
@@ -94,7 +94,7 @@ const RepRatings = ({ repData }) => {
         </details>
       ) : (
         <em>
-          <p className="no-rating-text">
+          <p className="no-rating-text aclu-none">
             The ACLU has not given this{" "}
             {repData.attributes.biography.congressional_type} a rating yet.
           </p>
