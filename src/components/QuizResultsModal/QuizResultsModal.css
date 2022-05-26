@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100%;
+  height: 90%;
   width: 78%;
 }
 
@@ -89,20 +89,6 @@
   font-weight: 600;
 }
 
-/* .one,
-.three,
-.five,
-.seven{
-  background-color: #A8DADC;
-  color: black;
-}
-
-.two,
-.four,
-.six{
-  background-color: #A8DADC;
-  color: black;
-} */
 
 .vote-icon {
   font-size: 20px;
@@ -110,19 +96,16 @@
 }
 
 @media screen and (max-width: 1355px) {
-  .modal-titles-em {
-    font-size: 18px;
-  }
   .modal-tiles {
     flex-direction: column;
     margin: 20px;
   }
 
   .modal{
-    height: 70vh;
+    overflow: auto;
   }
 
   .content {
-    overflow-y: scroll;
+    height: auto;
   }
 }
