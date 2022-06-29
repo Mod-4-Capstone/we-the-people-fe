@@ -7,7 +7,7 @@ describe('Landing Page', () => {
         body: legislatorData
       })
     })
-     .visit('http://localhost:3000/')
+     .visit('https://wethepeople.surge.sh/')
   })
 
   it('Should be able to visit the page and render a header with a title', () => {
@@ -31,7 +31,7 @@ describe('Landing Page', () => {
     .get('.zipcode-input').should('be.visible')
     .get('.statement').should('have.length', 10)
     .get('.state-form-container').should('be.visible')
-    .get('.state-dropdown > option').should('have.length', 50)
+    .get('.state-dropdown > option').should('have.length', 51)
   });
 
 it('Should allow the user to select an age range, zipcode, and answers to questions', () => {
@@ -59,7 +59,7 @@ describe('Quiz with zipcode user flow', () => {
         body: legislatorData
       })
     })
-     .visit('http://localhost:3000/')
+     .visit('https://wethepeople.surge.sh/')
       .get('.age-dropdown').select('18-28')
        .get('.zipcode-input').type(80030)
        .get('.s-disagree').eq(0).check()
@@ -132,7 +132,7 @@ describe('Quiz with zipcode user flow', () => {
   describe('Quiz with zipcode user flow - sad paths', () => {
 
     beforeEach(() => {
-        cy.visit(('http://localhost:3000/'))
+        cy.visit(('https://wethepeople.surge.sh/'))
     });
 
   it('Should direct the user to an error page if an invalid zipcode is entered on the form', () => {

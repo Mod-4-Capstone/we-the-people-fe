@@ -7,7 +7,7 @@ describe('Quiz with state user flow', () => {
         body: legislatorData
       })
     })
-     .visit('http://localhost:3000/')
+     .visit('https://wethepeople.surge.sh/')
       .get('.age-dropdown').select('18-28')
        .get('.zipcode-input').type(80030)
        .get('.s-disagree').eq(0).check()
