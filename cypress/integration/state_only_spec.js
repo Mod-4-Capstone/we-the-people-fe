@@ -7,7 +7,7 @@ describe('State dropdown without a quiz flow', () => {
         body: legislatorData
       })
     })
-     .visit('http://localhost:3000/')
+     .visit('https://wethepeople.surge.sh/')
   })
 
   it('Should allow the user to select a state using the state dropdown, and be redirected to a new page showing all state legislators', () => {
