@@ -115,7 +115,7 @@ We The People was built to be responsive across desktop, laptop, tablet, and mob
         </td>
         <td>
         <a href="https://github.com/zliibbe">GitHub  -
-        <a href="https://www.linkedin.com/in/zachliibbe/">LinkedIn
+        <a href="https://www.linkedin.com/in/zach-liibbe/">LinkedIn
         </td>
     </tr>
     <tr>
