@@ -1,5 +1,4 @@
 # We the People
-## See the [deployed site](https://wethepeople.surge.sh/).
 
 
 ![CI Badge](https://github.com/Mod-4-Capstone/we-the-people-fe/actions/workflows/main.yml/badge.svg)  ![CD Badge](https://github.com/Mod-4-Capstone/we-the-people-fe/actions/workflows/deploy.yml/badge.svg)
