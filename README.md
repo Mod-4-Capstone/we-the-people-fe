@@ -1,4 +1,3 @@
-
 # We the People
 ## See the [deployed site](https://wethepeople.surge.sh/).
 

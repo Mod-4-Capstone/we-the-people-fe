@@ -13,7 +13,7 @@ const Footer = () => {
       <a href="https://www.linkedin.com/in/nicole-valentini-9a576516b/">
         Nicole Valentini
       </a>
-      <a href="https://www.linkedin.com/in/zachliibbe/">Zach Liibbe</a>
+      <a href="https://www.linkedin.com/in/zach-liibbe/">Zach Liibbe</a>
     </section>
   );
 };
